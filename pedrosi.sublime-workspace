@@ -372,6 +372,29 @@
 	},
 	"file_history":
 	[
+		"/media/Data/Dropbox/Websites/pedrosi/public/books/Connections/Books_list.php",
+		"/media/Data/Dropbox/Websites/pedrosi/public/experiments/onefetch/index.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/books/Connections/Books_list_remote.php",
+		"/media/Data/Dropbox/Websites/pedrosi/public/pedro-si.sublime-workspace",
+		"/media/Data/Dropbox/Websites/pedrosi/public/laboratory.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/experiments/springing-oddissey/index.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/experiments/pong/index.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/experiments/conservation-of-momentum/conservation-of-momentum.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/books/updateEntry.php",
+		"/media/Data/Dropbox/Websites/pedrosi/public/books/login.php",
+		"/media/Data/Dropbox/Websites/pedrosi/public/backup/htdocs/laboratory.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/backup/htdocs/experiments/springing-oddissey/index.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/backup/htdocs/experiments/springing-oddissey/fbLike.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/backup/htdocs/experiments/pong/index.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/backup/htdocs/experiments/conservation-of-momentum/conservation-of-momentum.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/backup/htdocs/experiments/color-clock/index.html",
+		"/media/Data/Dropbox/Websites/pedrosi/public/index.html",
+		"/media/Data/Dropbox/Websites/did_i_read/public/index_old.html",
+		"/media/Data/Dropbox/Websites/pedrosi/Gemfile",
+		"/home/flape/.ssh/id_rsa.pub",
+		"/media/Data/Dropbox/Websites/pedrosi/.git/COMMIT_EDITMSG",
+		"/media/Data/Dropbox/Websites/pedrosi/b.log",
+		"/media/Data/Dropbox/Websites/pedrosi/.gitignore",
 		"/media/Data/Dropbox/Websites/did_i_read/TODO",
 		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/books.css.scss",
 		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/user_pages_spec.rb",
@@ -476,30 +499,7 @@
 		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/sass/62939eb9d13112d9f523532aff49b86cb0c95d34/tags.css.scssc",
 		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/tags.css.scss",
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/edit.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/update.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/destroy.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/_destroy.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/helpers/tags_helper.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/helpers/sessions_helper.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/controllers/user_controller_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120925171517_remove_tag_name_unique_index.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120922082225_create_indexs_on_notes_taggings_and_tags.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/database.yml",
-		"/home/flape/.labrador/config/initializers/auth.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120925132510_add_user_id_on_tags.rb",
-		"/home/flape/.labrador/Gemfile",
-		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/sass/b641e7df8abb9a72b34a5f056911c86186af0bba/_transition-property-name.scssc",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120808203742_add_admin_to_users.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/shelves_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/controllers/shelves_controller_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/application_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/.gitignore",
-		"/media/Data/Dropbox/Websites/did_i_read/.bundle/config",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/user.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/search.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/Gemfile.lock",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120919151232_create_reputation_system.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120919151233_add_reputations_index.rb"
+		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/update.html.erb"
 	],
 	"find":
 	{
@@ -507,9 +507,14 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
+			"/media/Data/Dropbox/Websites/pedrosi/public",
+			"/media/Data/Dropbox/Websites/did_i_read/public",
+			"*.html,/media/Data/Dropbox/Websites/did_i_read/public",
+			"/media/Data/Dropbox/Websites/did_i_read/public/,*.php, *.html",
+			"/media/Data/Dropbox/Websites/did_i_read/public/",
 			"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets",
 			"/media/Data/Dropbox/Websites/did_i_read/app/assets",
 			"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets",
@@ -548,6 +553,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pedrokost",
+			"pedrito",
+			"password",
+			"index.php",
+			"index",
+			"index.php",
 			"menu",
 			"span",
 			"full-page",
@@ -669,13 +680,7 @@
 			"div",
 			"quarter ",
 			"post",
-			" rate_b",
-			"), ",
-			"link_to",
-			"data",
-			"\"data-value\"",
-			"rate",
-			"check"
+			" rate_b"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -734,7 +739,7 @@
 		"cols":
 		[
 			0.0,
-			0.5,
+			0.648344370861,
 			1.0
 		],
 		"rows":
@@ -762,6 +767,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"lab",
+				"public/laboratory.html"
+			],
+			[
+				"in",
+				"public/index.html"
+			],
+			[
+				"b.lo",
+				"b.log"
+			],
+			[
+				"blog",
+				"public/books/login.php"
+			],
+			[
+				".g",
+				".gitignore"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
 			[
 				"analy",
 				"app/views/shared/_analytics.html.erb"
@@ -917,10 +946,6 @@
 			[
 				"configinisimp",
 				"config/initializers/simple_form.rb"
-			],
-			[
-				"gem",
-				"Gemfile"
 			],
 			[
 				"noterb",
@@ -1253,26 +1278,6 @@
 			[
 				"shelcss",
 				"app/assets/stylesheets/shelves.css.scss"
-			],
-			[
-				"authenc",
-				"spec/requests/authentication_pages_spec.rb"
-			],
-			[
-				"tagcontspe",
-				"spec/controllers/tags_controller_spec.rb"
-			],
-			[
-				"taghelpsp",
-				"spec/helpers/tags_helper_spec.rb"
-			],
-			[
-				"usepasp",
-				"spec/requests/user_pages_spec.rb"
-			],
-			[
-				"head",
-				"app/views/layouts/_header.html.erb"
 			]
 		],
 		"width": 0.0
@@ -1284,7 +1289,7 @@
 		[
 			[
 				"",
-				"/home/flape/Documents/Dropbox/Websites/personalwebsite_v2/personalwebsitev2.sublime-project"
+				"/home/flape/Documents/Dropbox/Misc/Github/Github.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1293,6 +1298,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 124.0,
+	"side_bar_width": 410.0,
 	"status_bar_visible": true
 }
