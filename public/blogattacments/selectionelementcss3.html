@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Changing the default selection color with CSS3</title>
+<style>
+::selection {  /*default*/
+	background: #FFC;
+}
+::-moz-selection {  /*default*/
+	background: #FFC;
+}
+.red::selection {
+	background: #ff3737;
+}
+.red::-moz-selection {
+	background: #ffb7b7;
+}
+.grey::selection {
+	background: #96909f;
+}
+.grey::-moz-selection {
+	background: #96909f;
+}
+img::selection {
+	background: #F90;
+}
+img::-moz-selection {
+	background: #F90;
+}
+</style>
+</head>
+
+<body>
+<h1>::selection element</h1>
+<p>by <a href="http://pedro.si" title="Pedro Koselec's website">Pedro Kostelec</a></p>
+
+<p>Read the <a href="http://blog.pedro.si/changing-selection-color-with-css3" title="Changint selection color with CSS3" target="_blank">related <em>blog post</em> about the ::selection pseudo-element</a></p>
+
+<h2 class="red">Select this paragrah with <span style="background-color: #ff3737;">RED</span></h2>
+<p class="red">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vestibulum, mi ut suscipit aliquet, arcu mauris ultricies sapien, in dignissim ipsum orci id felis. Morbi luctus eros quis purus fringilla pharetra. Praesent ipsum massa, dapibus non pellentesque at, ornare quis ipsum. Cras interdum aliquet massa, malesuada euismod tortor cursus in. Donec ac urna in enim tincidunt interdum eget ut felis. Ut dapibus dui non mauris tempus eleifend. Aenean convallis porttitor lorem, tincidunt venenatis orci rhoncus commodo. Pellentesque mi dolor, pretium non porttitor vitae, lobortis ac augue. Duis at rhoncus urna. Duis tempor ligula vitae mauris pellentesque lacinia facilisis enim suscipit. Quisque lacinia dolor sed purus rutrum eleifend. Morbi eu turpis sagittis erat vehicula porttitor.</p>
+<h2 class="grey">Select this image with <span style="background-color: #F90;">ORANGE</span></h2>
+<img src="http://farm6.static.flickr.com/5008/5267614291_37caf694c0_t.jpg"/>
+<h2 class="grey">Select this paragrah with <span style="background-color: #96909f;">GREY</span></h2>
+<p class="grey">Duis mattis vulputate magna, sit amet tincidunt sapien varius quis. Mauris et eros diam. Aenean ac sem lacus, ut rhoncus enim. Nullam id turpis id enim imperdiet malesuada. In hac habitasse platea dictumst. Curabitur sagittis, dui sed porttitor elementum, sapien metus dapibus justo, sit amet accumsan massa massa a nulla. Integer a nibh a elit luctus porttitor non vitae nisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec interdum interdum tortor sit amet tempor. Vestibulum iaculis condimentum elit, vel cursus justo auctor eget. Quisque rutrum libero id lacus sodales cursus. In hac habitasse platea dictumst. In auctor, purus eget elementum luctus, mauris leo dapibus tellus, a lobortis diam urna quis sem. Nam posuere gravida purus, a consequat elit vehicula non.</p>
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19545605-1']);
+  _gaq.push(['_setDomainName', '.pedro.si']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script> 
+</body>
+</html>

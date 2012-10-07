@@ -1,0 +1,351 @@
+/* CSS Document */
+
+@import 'boilerplate';
+
+
+@white: #E4DDBD;
+@cream: #B4B19B;
+@blue: #154F81;
+@brown: #33331D;
+@highlight: #C02B00;
+
+
+
+
+body{
+	font:14px Georgia, "Times New Roman", Times, serif;	
+	background-color: @brown;
+	color: darken(@brown, 20%);	
+}
+
+.topHeader{
+	background:@blue;
+	.gradientV(lighten(@blue, 30%),@blue); 
+	height:100px;
+	
+	h1 a{
+		color:@white;
+		display:block;
+		font-size:5em;
+		text-transform:uppercase;
+		text-decoration:none;
+		
+		&:visited{
+			color:@white;
+		}
+	}
+	h3{
+		background-color: lighten(@brown, 10%);
+		.borderRadius(0 10px 10px 0);
+		color:@cream;
+		display:block;
+		font-size:1.5em;
+		padding:5px 5px 5px 90px;
+		text-align:right;
+		width:500px;	
+	}
+}
+.section{
+	display:block;	
+	background:@white;
+	margin:50px auto 20px auto;
+	padding: 20px;
+	position:relative;
+}
+a, a:visited{
+	color:	@brown;
+	&:hover, &:active, &:focus{
+		color: lighten(@brown, 20%);
+	}
+}
+
+#userAccount{
+	display:block;
+	float:right;
+	position:absolute;
+	right:30px;
+	top:0;
+	width:320px;	
+	
+	img{
+		float:right;	
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	
+	.welcomeName{
+		color: @white;
+		display:block;
+		float:left;	
+		font-size:1.3em;
+		margin:20px 0 5px 0;
+		text-align:right;
+		width:200px;
+	}
+	
+	.logout{
+		display:block;
+		float:left;
+		text-align:right;
+		width:200px;
+		text-decoration:none;
+	}
+	
+	a, a:visited{
+		color:	@cream;
+		&:hover, &:active, &:focus{
+			color: @white;
+		}
+	}
+}
+
+h2{
+	font-size:1.5em;
+	font-weight:bold;	
+	padding:10px 0 5px 0;
+	margin-bottom:5px;
+	border-bottom:1px dotted darken(@brown, 20%);
+}
+
+#quickStats{
+	.clearfix;
+	display:block;	
+	background:@white;
+	margin:50px auto 20px auto;
+	padding: 20px;
+	
+	p{
+		font-size:1.2em;	
+	}
+}
+
+
+
+#booksSection{
+	.section;
+	
+	.addBookBtn{
+		.callToAction(@highlight);	
+		font-size:1.5em;
+		position:absolute;
+		right:18px;
+		top:10px;
+	}
+}
+
+.tableResults{
+	border-collapse:collapse;
+	width:100%;	
+	vertical-align:middle;
+	cursor:default;
+	
+	
+	th{
+		cursor:pointer;
+		font-size:1.3em;
+		font-weight:bold;
+		height:50px;
+		text-decoration:none;
+		vertical-align:middle;
+		text-align:left;
+		
+		.header:before{
+			content:'↕';	
+		}
+	}
+	td{
+		vertical-align:middle; 
+		height:30px;
+		div{
+			overflow:hidden;
+			line-height:1.5em;
+			min-height:40px;	
+			height:40px;
+			padding:3px;
+			.transition(height 0.5s ease-out);
+			
+			&:hover, &:focus{
+				position:relative;
+				z-index:1;
+				height:auto;
+			}
+		}
+	}
+	tr{
+		&:nth-child(even){
+			background-color: darken(@white, 10%);	
+		}
+		&:hover{
+			background-color: lighten(@white, 20%);
+		}
+		&:first-child:hover{
+			background-color: inherit;
+		}
+	}
+	.title{
+		font-weight:bold;
+	}
+	.fiction, .rating, .delete{
+		text-align:center;	
+	}
+	tr .rating{
+		div{
+			background:url(../images/ratingStars.gif) no-repeat;
+			height:14px !important;
+			min-height:14px;
+			width:75px !important;
+			padding:0;
+			text-indent:-9999em;
+			
+			@separation: -14px;
+			@offset: -3px;
+			
+			&.kfive{background-position:0 0px;}
+			&.jfour-half{background-position:0 @separation*1 + @offset*0 - 2}
+			&.ifour{background-position:0 @separation * 2 + @offset * 1 - 1}
+			&.hthree-half{background-position:0 @separation * 3 + @offset * 2}
+			&.gthree{background-position:0 @separation * 4 + @offset * 3}
+			&.ftwo-half{background-position:0 @separation * 5 + @offset * 4}
+			&.etwo{background-position:0 @separation * 6 + @offset * 5}
+			&.done-half{background-position:0 @separation * 7 + @offset * 6}
+			&.cone{background-position:0 @separation * 8 + @offset * 7}
+			&.bzero-half{background-position:0 @separation * 9 + @offset * 8}
+			&.azero{}
+		}
+	}
+	
+}
+.oddRow {
+	background-color: darken(@white, 10%);
+}
+.evenRow {
+
+}
+.selectRow {
+	background-color: lighten(@white, 20%);
+}
+.hoverRow {
+	background-color: lighten(@white, 20%);
+}
+
+.submitBtn{
+	.callToAction(@highlight);	
+	float:none;
+}
+#addBookSection{
+	.section;
+}
+form{
+	label{
+		display:inline-table;
+		padding:7px 0 2px 0;
+		vertical-align:top;
+		width:120px;
+	}
+	
+	.hidden{
+		display:inline;	
+		position:relative;
+	}
+	output{
+		position: absolute;
+		.gradientH(lighten(@brown, 20%), @brown);
+		width:40px;
+		height:25px;
+		text-align:center;
+		color:@white;
+		.borderRadius(10px);
+		display:inline-block;
+		top:-17px;
+		right:-50px;
+		margin-left:-2%;
+		
+		&:before{
+			content:"";
+			position:absolute;
+			width:0;
+			height:0;
+			border-bottom: 10px solid lighten(@brown, 20%);
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			.transform(rotate(-90deg));
+			top:40%;
+			right:100%;
+			margin-right:-2px;
+			margin-top:-2px;
+		}
+	}
+	input, textarea{
+		position:relative;
+		.borderRadius(5px);
+		background:@brown;
+		color:@white;
+		font:inherit;
+		padding:3px;
+		margin:2px 0;
+		width:250px;
+		border:4px solid @brown;
+
+		&:focus, &:hover, &:active{
+			border:4px solid @blue;
+			background:@brown;
+		}
+		
+		&[type="submit"]{
+			border:1px;	
+			&:focus, &:hover, &:active{
+				border: 1px;
+			}
+		}
+		&[type="checkbox"]{
+			width:auto;	
+		}
+	}
+	
+	fieldset{
+		border: 1px solid @brown;
+		.borderRadius(5px);
+		padding:5px;
+		legend{
+				font-size:1.5em;
+				font-weight:bold;	
+				padding:10px 0 5px 0;
+				margin-bottom:5px;
+			}
+	}
+}
+
+
+.sectionLike{
+	.section;
+	overflow:hidden;
+
+	
+	#loginSection{
+		position:relative;
+		float:right;	
+		
+		label{
+			width:100px;
+		}
+		
+		input{
+			width:200px;
+				
+			&.loginBtn{
+				.callToAction(@highlight);
+				border-width:1px;
+				width:auto;	
+				float:right;
+			}
+		}
+	}
+	
+	#favorite{
+		width:600px;
+		th{
+			cursor:default;	
+		}
+	}
+}

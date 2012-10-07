@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsBooks" value="name:ID;datatype:int,name:Title;datatype:string,name:Author;datatype:string,name:Date read;datatype:date,name:Rating;datatype:real,name:Comments;datatype:string,name:fiction;datatype:int" />
+	<infoitem key="UD_rsUser" value="name:username;datatype:string,name:image;datatype:string,name:Name;datatype:string" />
+	<infoitem key="UD_rsBooksFiction" value="name:ID;datatype:int" />
+</info>

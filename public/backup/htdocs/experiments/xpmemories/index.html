@@ -1,0 +1,113 @@
+<html !DOCTYPE>
+	<head>
+		<title>Remember the Windows freezes?</title>
+		<style>
+			body{
+				padding:0;
+				margin:0;
+				cursor:none;
+			}
+			h1{
+				background:white;
+				opacity:0.8;
+				width:100%;
+				height:40px;
+				position:fixed;
+				top:0;
+				left:0;	
+				padding: 0;
+				margin: 0;
+			}
+			p, h1, canvas, body{
+				padding: 0;
+				margin: 0;	
+			}
+		</style>
+        <!--[if lte IE 8]><script src="excanvas.js"></script><![endif]-->
+	</head>
+	<body>
+    <canvas id="canvas"></canvas>
+    <h1>Remember the times when Windows froze?</h1>
+	<p id="disclaimer">If you are seeing this, the experiment has failed. But it certainly works in <a href="http://www.google.com/chrome/" title="Dowload Google Chrome" target="_blank">Chrome</a> and <a href="http://www.firefox.com">Firefox</a>.</p>
+    <p id="console"></p>
+		<script>
+			var console = document.getElementById('console');
+			function cc(message){
+				
+					console.innerHTML += ("<br/>" + message);
+			}
+			function addEvent (node, action, evt) {
+				if(node.addEventListener)
+					node.addEventListener(action, evt, false);
+				else
+					node.attachEvent('on' + action, evt, false);
+			}
+
+			var currentWindowX = window.innerWidth;
+			var currentWindowY = window.innerHeight;
+			var offsetX, offsetY;
+
+			var canvas = document.getElementById( 'canvas' );
+			canvas.width = currentWindowX;
+			canvas.height = currentWindowY;
+			canvas.style.display = 'block';
+			
+			//cc(canvas);
+ 
+			var ctx = canvas.getContext( '2d' );
+			
+			//cc(ctx);
+
+			var image = document.createElement('img');
+			var bg = document.createElement('img');
+			//image.src = 'winxp.png';
+			//bg.src = 'winxpbg.png';
+			
+			addEvent(image, 'load', function () {
+				offsetX = this.width * 0.5;
+				offsetY = 20;
+				document.body.removeChild(document.getElementById('disclaimer'));
+				ctx.drawImage('winxpbg.png', 0, 0, currentWindowX, currentWindowY);
+
+				addEvent(document, 'mousemove', onMouseEvent);
+			});
+			
+			function onMouseEvent (event) {
+				ctx.drawImage('winxp.png', event.clientX - offsetX, event.clientY - offsetY);
+			}
+
+			window.onresize = function () {
+				ctx.drawImage(bg, 0, 0, currentWindowX, currentWindowY);
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}
+	</script>
+    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+	<script>
+            //generate the facebook like button
+            (function(){
+                var pos = document.body;
+                if(pos != null){
+                    var url = document.location.toString();
+                    var slashi = url.lastIndexOf("/");
+                    var urlEnd = url.slice(slashi + 1);
+                    if(urlEnd == "index.html" || urlEnd == "index.htm" || urlEnd == "index.php")
+                        url = url.slice(0, slashi + 1);
+            
+                    var fbDiv = document.createElement("DIV");
+                    var fbLike = document.createElement("fb:like");
+                    fbLike.setAttribute("href", url);
+                    fbLike.setAttribute("show_faces", "false");
+                    fbLike.setAttribute("layout", "button_count");
+                    fbDiv.style.position = "fixed";
+                    fbDiv.style.display = "block";
+                    fbDiv.style.right = 100 + "px";
+					fbDiv.style.top = 10 + "px";
+					fbDiv.style.zIndex = 3;
+					fbDiv.appendChild(fbLike);
+                    pos.appendChild(fbDiv);
+                }
+            })();
+        </script>
+	</body>
+</html>
