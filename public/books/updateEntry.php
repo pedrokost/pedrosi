@@ -49,7 +49,7 @@ if ((isset($_POST["MM_update"])) && ($_POST["MM_update"] == "Update book")) {
   mysql_select_db($database_Books_list, $Books_list);
   $Result1 = mysql_query($updateSQL, $Books_list) or die(mysql_error());
 
-  $updateGoTo = "index.php";
+  $updateGoTo = "index.html";
   if (isset($_SERVER['QUERY_STRING'])) {
     $updateGoTo .= (strpos($updateGoTo, '?')) ? "&" : "?";
     $updateGoTo .= $_SERVER['QUERY_STRING'];

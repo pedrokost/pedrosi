@@ -17,7 +17,7 @@
 $(document).ready(function(){
 	$.support.cors = true;
 	var container = $("#randomPost");
-	var credentials = base64.encode("pedrokost@gmail.com:pedrito,");
+	var credentials = base64.encode("pedrokost@gmail.com:<filtered>");
 	var url = 'https://secure.diigo.com/api/v2/bookmarks?key=61a77a4647e98668&callback=?'
 	$.ajax({
 		url: url,

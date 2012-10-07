@@ -52,7 +52,7 @@ if (isset($_POST['username'])) {
   $loginUsername=$_POST['username'];
   $password=$_POST['password'];
   $MM_fldUserAuthorization = "";
-  $MM_redirectLoginSuccess = "index.php";
+  $MM_redirectLoginSuccess = "index.html";
   $MM_redirectLoginFailed = "login.php";
   $MM_redirecttoReferrer = false;
   mysql_select_db($database_Books_list, $Books_list);
