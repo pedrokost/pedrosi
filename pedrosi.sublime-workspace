@@ -271,6 +271,38 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 758,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 5468,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/laboratory.html",
+			"settings":
+			{
+				"buffer_size": 7967,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/flape/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 385,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -372,6 +404,9 @@
 	},
 	"file_history":
 	[
+		"/media/Data/Dropbox/Websites/pedrosi/public/experiments.html",
+		"/media/Data/Dropbox/Websites/pedrosi/.git/COMMIT_EDITMSG",
+		"/media/Data/Dropbox/Websites/pedrosi/Gemfile.lock",
 		"/media/Data/Dropbox/Websites/pedrosi/public/books/Connections/Books_list.php",
 		"/media/Data/Dropbox/Websites/pedrosi/public/experiments/onefetch/index.html",
 		"/media/Data/Dropbox/Websites/pedrosi/public/books/Connections/Books_list_remote.php",
@@ -392,7 +427,6 @@
 		"/media/Data/Dropbox/Websites/did_i_read/public/index_old.html",
 		"/media/Data/Dropbox/Websites/pedrosi/Gemfile",
 		"/home/flape/.ssh/id_rsa.pub",
-		"/media/Data/Dropbox/Websites/pedrosi/.git/COMMIT_EDITMSG",
 		"/media/Data/Dropbox/Websites/pedrosi/b.log",
 		"/media/Data/Dropbox/Websites/pedrosi/.gitignore",
 		"/media/Data/Dropbox/Websites/did_i_read/TODO",
@@ -497,9 +531,7 @@
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_shelve.html.erb",
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/_tag.html.erb",
 		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/sass/62939eb9d13112d9f523532aff49b86cb0c95d34/tags.css.scssc",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/tags.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/edit.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/update.html.erb"
+		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/tags.css.scss"
 	],
 	"find":
 	{
@@ -507,7 +539,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 95.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"/media/Data/Dropbox/Websites/pedrosi/public",
@@ -701,13 +733,124 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 758,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								563,
+								563
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/index.html",
+					"settings":
+					{
+						"buffer_size": 5468,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2805,
+								2805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 840.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/laboratory.html",
+					"settings":
+					{
+						"buffer_size": 7967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1859,
+								1859
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 144.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 3,
+					"file": "/home/flape/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+					"settings":
+					{
+						"buffer_size": 385,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								129,
+								129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -767,6 +910,26 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"labor",
+				"public/laboratory.html"
+			],
+			[
+				"expe",
+				"public/experiments.html"
+			],
+			[
+				"index",
+				"public/index.html"
+			],
+			[
+				"gemlo",
+				"Gemfile.lock"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
 			[
 				"lab",
 				"public/laboratory.html"
@@ -1258,26 +1421,6 @@
 			[
 				"usernew",
 				"app/views/users/new.html.erb"
-			],
-			[
-				"rout",
-				"config/routes.rb"
-			],
-			[
-				"authorcon",
-				"app/controllers/authors_controller.rb"
-			],
-			[
-				"apcss",
-				"app/assets/stylesheets/application.css.scss"
-			],
-			[
-				"notecss",
-				"app/assets/stylesheets/notes.css.scss"
-			],
-			[
-				"shelcss",
-				"app/assets/stylesheets/shelves.css.scss"
 			]
 		],
 		"width": 0.0
