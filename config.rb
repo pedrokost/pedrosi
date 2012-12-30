@@ -14,7 +14,7 @@
 ###
 # Page options, layouts, aliases and proxies
 ###
-
+page "*", layout: :full_layout
 # Per-page layout changes:
 #
 # With no layout
