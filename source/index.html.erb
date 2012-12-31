@@ -19,14 +19,7 @@ Hello, my name is Pedro Kostelec and I'm a <span itemprop="title">programmer, de
 	<h1 class="section">Labs</h1>
     <article>
 		<% page_articles.each_with_index do |article, i| %>
-			<%
-				url_path = article.data.end_path
-				unless url_path
-					url_path = article.url  #/labs/2011/xp-memorial.html
-					# url_path.gsub!(".html", "/") #/labs/2011/xp-memorial/
-				end
-			%>
-			<% link_to url_path, title: article.title do %> 
+			<% link_to article, title: article.title do %> 
 				<div class="experiment">
                   <h4><%= article.title %></h4>
                   <div class="tools">
@@ -35,7 +28,7 @@ Hello, my name is Pedro Kostelec and I'm a <span itemprop="title">programmer, de
                   	<% end %>
                   </div>
                   <figure class="experFig">
-                  	<%= image_tag article.url[0..-6] + "/thumbnail.png", width:64, height: 64, alt: article.title %>
+                  	<%= image_tag article.url + "thumbnail.png", width:64, height: 64, alt: article.title %>
                   </figure>
                   <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
                   <p><%= article.data.description %></p>
