@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"middle",
+				"middleman-blog"
+			],
+			[
 				"cover",
 				"coverHoverBgColor"
 			],
@@ -271,13 +275,49 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "source/labs/2011-02-02-pong-in-2-5d.html.erb",
+			"settings":
+			{
+				"buffer_size": 3595,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/labs/2011-02-02-pong-in-2-5d/pong.html",
+			"settings":
+			{
+				"buffer_size": 6247,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 163,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 213,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"remove",
 				"Package Control: Remove Package"
@@ -289,10 +329,6 @@
 			[
 				"upda",
 				"Package Control: Upgrade Package"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"install",
@@ -355,7 +391,7 @@
 				"Package Control: Disable Package"
 			]
 		],
-		"width": 579.0
+		"width": 472.0
 	},
 	"console":
 	{
@@ -372,6 +408,88 @@
 	},
 	"file_history":
 	[
+		"/E/Dropbox/Websites/pedrosi/source/index.html.erb",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2009/springing-oddissey/index.html",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2010/snowfall-particle-system/index.html",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2011/collisions/index.html",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2011/pong-in-2-5d/pong.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2009-01-22-springing-oddissey.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2009-01-22-springing-oddissey/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-01-22-snowfall-particle-system/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-18-collisions/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/layouts/experiment_layout.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-02-02-pong-in-2-5d/pong.html",
+		"/E/Dropbox/Websites/pedrosi/source/layouts/full_layout.erb",
+		"/E/Dropbox/Websites/pedrosi/source/layouts/layout.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-19-xp-memorial/memorial.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-19-xp-memorial.html.erb",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2011/color-clock/index.html",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2011/color-clock/color.html",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2010/flexible-box-model/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-25-color-clock.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-02-02-pong-in-2-5d/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-25-color-clock/color.html",
+		"/E/Dropbox/Websites/pedrosi/build/labs/2011/pong-in-2-5d/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-12-31-flexible-box-model/index.html",
+		"/E/Dropbox/Websites/pedrosi/pedrosi.sublime-workspace",
+		"/E/Dropbox/Websites/pedrosi/Procfile",
+		"/E/Dropbox/Websites/pedrosi/Gemfile",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-23-boljsa-e-ucilnica-moodle.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-04-25-books-i-ve-read.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-02-02-pong-in-2-5d.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-18-collisions.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-12-31-flexible-box-model.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-01-22-snowfall-particle-system.html.erb",
+		"/E/Dropbox/Websites/pedrosi/config.ru",
+		"/E/Dropbox/Websites/pedrosi/source/experiments/springing-oddissey/index.html",
+		"/E/Dropbox/Websites/pedrosi_rails/config.ru",
+		"/E/Dropbox/Websites/pedrosi/source/experiments/color-clock/index.html",
+		"/E/Dropbox/Websites/pedrosi/config.rb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-04-25-books-i-ve-read.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-23-boljsa-e-ucilnica-moodle.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-19-xp-memorial.html.markdown.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2009-01-22-springing-oddissey.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-01-22-snowfall-particle-system.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-12-31-flexible-box-model.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-18-collisions.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-25-color-clock.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/layout.erb",
+		"/E/Dropbox/Websites/pedrosi/source/experiments/pong/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-02-02-pong-in-2-5d.html.markdown.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-19-xp-memorial/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-02-02-pong-in-2-5d.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-03-19-xp-memorial.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/layouts/full_layout.erb",
+		"/E/Dropbox/Websites/pedrosi/layouts/experiment_layout.erb",
+		"/E/Dropbox/Websites/pedrosi/layouts/layout.erb",
+		"/E/Dropbox/Websites/pedrosi_rails/public/laboratory.html",
+		"/E/Dropbox/Websites/pedrosi_rails/public/index.html",
+		"/E/Dropbox/Websites/pedrosi/source/stylesheets/style.css.scss",
+		"/E/Dropbox/Websites/pedrosi/source/stylesheets/laboratory.css.scss",
+		"/E/Dropbox/Websites/pedrosi_rails/public/experiments/jumpover/raphael.js",
+		"/E/Dropbox/Websites/pedrosi_rails/public/experiments/jumpover/raphael-min.js",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-25-color-clock/thumbnail.gif",
+		"/E/Dropbox/Websites/pedrosi_rails/public/assets/css/style0-00-031.css",
+		"/E/Dropbox/Websites/pedrosi/source/stylesheets/style0-1-1.css",
+		"/E/Dropbox/Websites/pedrosi/TODO",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-01-18-color-clock.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-12-31-color-clock.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2009-02-02-springing-oddissey.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2010-12-31-collisions.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2012-12-30-collisions-conservation-of-momentum.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/calendar.html.erb",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2012-01-01-example-article.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2012-12-30-books-i-ve-read.html.markdown",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2011-04-25-books-ive-read.html",
+		"/E/Dropbox/Websites/pedrosi_rails/public/education.html",
+		"/E/Dropbox/Websites/pedrosi/source/labs/2012-01-01-example-article.html.markdown",
+		"/C/Users/Pedro Kostelec/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/E/Dropbox/Websites/pedrosi_rails/Gemfile",
+		"/E/Dropbox/Websites/pedrosi/source/2012-01-01-example-article.html.markdown",
+		"/home/flape/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/media/Data/Dropbox/Websites/pedrosi/public/experiments.html",
+		"/media/Data/Dropbox/Websites/pedrosi/.git/COMMIT_EDITMSG",
+		"/media/Data/Dropbox/Websites/pedrosi/Gemfile.lock",
 		"/media/Data/Dropbox/Websites/pedrosi/public/books/Connections/Books_list.php",
 		"/media/Data/Dropbox/Websites/pedrosi/public/experiments/onefetch/index.html",
 		"/media/Data/Dropbox/Websites/pedrosi/public/books/Connections/Books_list_remote.php",
@@ -392,7 +510,6 @@
 		"/media/Data/Dropbox/Websites/did_i_read/public/index_old.html",
 		"/media/Data/Dropbox/Websites/pedrosi/Gemfile",
 		"/home/flape/.ssh/id_rsa.pub",
-		"/media/Data/Dropbox/Websites/pedrosi/.git/COMMIT_EDITMSG",
 		"/media/Data/Dropbox/Websites/pedrosi/b.log",
 		"/media/Data/Dropbox/Websites/pedrosi/.gitignore",
 		"/media/Data/Dropbox/Websites/did_i_read/TODO",
@@ -418,88 +535,7 @@
 		"/media/Data/Dropbox/Websites/did_i_read/app/models/author.rb",
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/books/edit.html.erb",
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/edit.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120809182306_add_author_id_to_book.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/users_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/book_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120916194918_add_isbn_to_books.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120918131355_add_index_books_on_isbn_unique.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20121004175336_remove_index_isbn_on_books.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/book.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/layouts/application.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/Gemfile",
-		"/media/Data/Dropbox/Websites/did_i_read/config/initializers/simple_form.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/locales/simple_form.en.yml",
-		"/media/Data/Dropbox/Websites/did_i_read/lib/templates/erb/scaffold/_form.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/note_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/note.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/schema.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/pages.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/.rspec",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/user_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/navigation.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/layouts/_header.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/shelves.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_logo.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/bin/rspec",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_tag.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/pages/home.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/helpers/application_helper_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/tag_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/helpers/application_helper.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/log/development.log",
-		"/media/Data/Dropbox/Websites/did_i_read/log/bullet.log",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/tag.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930150924_cache_notes_count.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930150208_add_notes_count_to_tags.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930144305_cache_books_count.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/users/show.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_error_messages.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/show.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/user.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/_author.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/index.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/authors_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930144205_add_books_count_to_authors.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/environments/development.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/initializers/bullet.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/page_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/authentication_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/notes_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/responsive.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/support/utilities.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/sessions/new.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/b.log",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/pages.css.scss.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/yetting.yml",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_shelf.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/index.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/tag_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/_shelf.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/new.html.erb",
-		"/home/flape/Documents/test.html",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120928195216_add_editorial_review_on_books.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/helpers/books_helper.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/initializers/carrierwave.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/seeds.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/lib/tasks/sample_data.rake",
-		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/assets/C4F/A50/sprockets%2F52b01d14b637a6cd781081686264288e",
-		"/media/Data/Dropbox/Websites/did_i_read/config/application.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/tags_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/create.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/controllers/tags_controller_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/factories.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/routes.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/users/new.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/users/_fields.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/notes.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/notes_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/helpers/tags_helper_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_shelve.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/_tag.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/sass/62939eb9d13112d9f523532aff49b86cb0c95d34/tags.css.scssc",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/tags.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/edit.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/update.html.erb"
+		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120809182306_add_author_id_to_book.rb"
 	],
 	"find":
 	{
@@ -507,9 +543,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 95.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"E:\\Dropbox\\Websites\\pedrosi",
+			"/media/Data/Dropbox/Websites/pedrosi",
 			"/media/Data/Dropbox/Websites/pedrosi/public",
 			"/media/Data/Dropbox/Websites/did_i_read/public",
 			"*.html,/media/Data/Dropbox/Websites/did_i_read/public",
@@ -553,6 +591,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"../../Scripts",
+			"../../laboratory.html",
+			"experiment",
+			"css",
 			"pedrokost",
 			"pedrito",
 			"password",
@@ -676,11 +718,7 @@
 			"tag",
 			"boo",
 			" text-indent",
-			"book",
-			"div",
-			"quarter ",
-			"post",
-			" rate_b"
+			"book"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -688,6 +726,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"/javascripts",
+			"/",
 			"$base-text-color",
 			"k",
 			"logo2"
@@ -701,13 +741,117 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
-			]
-		},
-		{
-			"sheets":
-			[
+				{
+					"buffer": 0,
+					"file": "source/labs/2011-02-02-pong-in-2-5d.html.erb",
+					"settings":
+					{
+						"buffer_size": 3595,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3185,
+								3185
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 594.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/labs/2011-02-02-pong-in-2-5d/pong.html",
+					"settings":
+					{
+						"buffer_size": 6247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 163,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								213,
+								213
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -728,18 +872,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.648344370861,
 			1.0
 		],
 		"rows":
@@ -767,6 +904,78 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"ignore",
+				"pedrosi/.gitignore"
+			],
+			[
+				"full_layou",
+				"pedrosi/source/layouts/full_layout.erb"
+			],
+			[
+				"layout",
+				"pedrosi/source/layouts/layout.erb"
+			],
+			[
+				"confi",
+				"pedrosi_rails/config.ru"
+			],
+			[
+				"springindex",
+				"pedrosi/source/experiments/springing-oddissey/index.html"
+			],
+			[
+				"oddy",
+				"pedrosi/source/labs/2009-01-22-springing-oddissey.html.erb"
+			],
+			[
+				"laout",
+				"pedrosi/source/layout.erb"
+			],
+			[
+				"coloindex",
+				"pedrosi/source/experiments/color-clock/index.html"
+			],
+			[
+				"pongindex",
+				"pedrosi/source/experiments/pong/index.html"
+			],
+			[
+				"meminde",
+				"pedrosi/source/labs/2011-03-19-xp-memorial/index.html"
+			],
+			[
+				"index",
+				"pedrosi/source/index.html.erb"
+			],
+			[
+				"laboratory",
+				"pedrosi/source/stylesheets/laboratory.css.scss"
+			],
+			[
+				"labor",
+				"pedrosi_rails/public/laboratory.html"
+			],
+			[
+				"snow",
+				"pedrosi/source/labs/2010-01-22-snowfall-particle-system.html.markdown"
+			],
+			[
+				"index.html",
+				"pedrosi_rails/public/index.html"
+			],
+			[
+				"expe",
+				"public/experiments.html"
+			],
+			[
+				"gemlo",
+				"Gemfile.lock"
+			],
+			[
+				"gemf",
+				"Gemfile"
+			],
 			[
 				"lab",
 				"public/laboratory.html"
@@ -1206,78 +1415,6 @@
 			[
 				"applicaionhtmlerb",
 				"app/views/layouts/application.html.erb"
-			],
-			[
-				"seed",
-				"db/seeds.rb"
-			],
-			[
-				"sampleda",
-				"lib/tasks/sample_data.rake"
-			],
-			[
-				"app",
-				"config/application.rb"
-			],
-			[
-				"tagrb",
-				"app/models/tag.rb"
-			],
-			[
-				"yett",
-				"config/yetting.yml"
-			],
-			[
-				"bookfie",
-				"app/views/books/_fields.html.erb"
-			],
-			[
-				"tagcont",
-				"app/controllers/tags_controller.rb"
-			],
-			[
-				"erro",
-				"app/views/shared/_error_messages.html.erb"
-			],
-			[
-				"shareerr",
-				"app/views/shared/_error_messages.html.erb"
-			],
-			[
-				"fact",
-				"spec/factories.rb"
-			],
-			[
-				"shelvcss",
-				"app/assets/stylesheets/shelves.css.scss"
-			],
-			[
-				"userfie",
-				"app/views/users/_fields.html.erb"
-			],
-			[
-				"usernew",
-				"app/views/users/new.html.erb"
-			],
-			[
-				"rout",
-				"config/routes.rb"
-			],
-			[
-				"authorcon",
-				"app/controllers/authors_controller.rb"
-			],
-			[
-				"apcss",
-				"app/assets/stylesheets/application.css.scss"
-			],
-			[
-				"notecss",
-				"app/assets/stylesheets/notes.css.scss"
-			],
-			[
-				"shelcss",
-				"app/assets/stylesheets/shelves.css.scss"
 			]
 		],
 		"width": 0.0
@@ -1289,7 +1426,7 @@
 		[
 			[
 				"",
-				"/home/flape/Documents/Dropbox/Misc/Github/Github.sublime-project"
+				"/E/Dropbox/Websites/did_i_read/Did_I_Read.sublime-project"
 			]
 		],
 		"width": 380.0
@@ -1298,6 +1435,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 410.0,
+	"side_bar_width": 362.0,
 	"status_bar_visible": true
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Modified version of TryStatic, from rack-contrib
 # https://github.com/rack/rack-contrib/blob/master/lib/rack/contrib/try_static.rb
 
@@ -41,9 +40,3 @@ run lambda{ |env|
     [ 404, { 'Content-Type'  => 'text/html' }, ['404 - page not found'] ]
   end
 }
-=======
-# This file is used by Rack-based servers to start the application.
-
-require ::File.expand_path('../config/environment',  __FILE__)
-run Pedrosi::Application
->>>>>>> bd572e97e46501c588eef9ab990142871393412c
