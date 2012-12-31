@@ -9,7 +9,7 @@ The website in build on Middleman
 ### Setup
 
     # To host a middleman app on Heroku, you need to use a custom buildpack. 
-	$ heroku config:add BUILDPACK_URL=http://github.com/rstacruz/heroku-buildpack-middleman.git
+	$ heroku config:add BUILDPACK_URL=http://github.com/indirect/heroku-buildpack-middleman.git
 	# ... and then republish your app so it's built.
 
 The only expectation is that `middleman build` will generate your site into `./build`. That's where Rack::TryStatic will look.
