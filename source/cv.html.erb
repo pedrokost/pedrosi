@@ -1,14 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-<head>
-<title>Pedro Kostelec | Web disign, programer</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" media="all" />
-<link rel="stylesheet" type="text/css" href="resume.css" media="all" />
-</head>
-<body>
+---
+layout: layout
+---
+
+<% content_for :head do %>
+<%= stylesheet_link_tag "html5reset-1.6.1","http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css", "resume" %>
+<% end %>
+
+
 <div id="doc2" class="yui-t7">
 	<div id="inner">
 		<div id="hd">
@@ -19,7 +17,7 @@
 				</div>
 				<div class="yui-u">
 					<div class="contact-info">
-						<h3><a href="mailto:pedrokost@gmail.com">pedrokost@gmail.com</a></h3>
+						<h3><a href="mailto:web@pedro.si">web@pedro.si</a></h3>
 						<h3>(00 386) 41-587-062</h3>
 						<h3><a href="http://pedro.si">http://pedro.si</a></h3>
 					</div>
@@ -66,17 +64,16 @@
 						</div>						<div class="yui-u">
 							<ul class="talent">
 								<li>HTML (95%)</li>
-								<li>CSS (90%)</li>
+								<li>CSS (95%)</li>
 								<li class="last">Javascript (85%)</li>
 							</ul>
-							<ul class="talent">								<li>ActionScript (80%)</li>
-								<li>Java (60%)</li>
-								<li class="last">Rails (25%)</li>
+							<ul class="talent">								
+								<li>Java (80%)</li>
+								<li>Ruby on Rails (80%)</li>
+								<li class="last">ActionScript (20%)</li>
 							</ul>
 							<ul class="talent">
-								<li>Photoshop, Fireworks</li>
-								<li>Flash, Dreamweaver</li>
-								<li class="last">Windows / Linux</li>
+								<li class="">Windows / Linux</li>
 							</ul>
 						</div>
 					</div>
@@ -124,7 +121,7 @@
 						
 						<div class="yui-u">
 							<div class="job">
-								<h2><a href="http://pedro.si/portfolio/lsb/lsb.swf" target="_blank">London Student Bible</a></h2>
+								<h2><a href="/labs/2009/london-student-bible/" target="_blank">London Student Bible</a></h2>
 								<h3>Flash splash screen design</h3>
 								<h4>June-July 2009</h4>
 								<p>Designed and created a fluid splash/home page for the London Student Bible project.<br />
@@ -217,24 +214,9 @@
 		<!--// bd -->
 		
 		<div id="ft">
-			<p>Pedro Damian Kostelec &mdash; <a href="mailto:pedrokost@gmail.com">pedrokost@gmail.com</a> &mdash; (00 386) 41-587-062 &mdash;<a href="http://pedro.si">pedro.si</a></p>
+			<p>Pedro Damian Kostelec &mdash; <a href="mailto:web@pedro.si">web@pedro.si</a> &mdash; (00 386) 41-587-062 &mdash;<a href="http://pedro.si">pedro.si</a></p>
 		</div>
 		<!--// footer --> 
 	</div>
 	<!-- // inner --> 
 </div>
-<!--// doc -->
-<script type="text/javascript">
- var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19545605-1']);
-  _gaq.push(['_setDomainName', '.pedro.si']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script> 
-</body>
-</html>
