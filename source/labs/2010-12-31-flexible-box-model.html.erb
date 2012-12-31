@@ -6,3 +6,190 @@ description: Nice navigation and banner gallery effect in pure CSS3 (using the f
 end_path: 
 ---
 
+<% content_for :header do %>
+	CSS3's Flexible box model <small>gallery and navigation example</small>
+<% end %>
+<% content_for :intro do %>
+    Flexible box model is a new CSS box model, that determines how the boxes are distributed inside other boxes and the way they share the available space.
+<% end %>
+
+<% content_for :head do %>
+<style>
+body {
+	margin:0;
+	padding:0;
+}
+/*main gallery*/
+.gallery {
+	background:#000;
+	width:100%;
+	height:500px;
+	display:box;
+	box-orient: horizontal;
+	display:-webkit-box;
+	-webkit-box-orient: horizontal;
+	display: -moz-box;
+	-moz-box-orient: horizontal;
+}
+.gallery > div {
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-webkit-transition:width 0.6s ease-out;
+	-moz-transition:width 0.6s ease-out;
+	-moz-transition:all 0.6s ease-out;
+	transition:width 0.6s ease-out;
+}
+.gallery > div:nth-child(1) {
+	background:#FCC url(http://farm4.static.flickr.com/3280/2889930544_a5be155766_b.jpg);
+}
+.gallery > div:nth-child(2) {
+	background:#CFC url(http://farm4.static.flickr.com/3248/2786241330_b9bb2bb61d_b.jpg);
+}
+.gallery > div:nth-child(3) {
+	background:#CFF url(http://farm1.static.flickr.com/45/181248771_5473f694bb_b.jpg);
+}
+.gallery > div:nth-child(4) {
+	background:#FCF url(http://farm4.static.flickr.com/3206/2988137900_f17c13443f_b.jpg);
+}
+.gallery > div:hover {
+	width:400px;
+}
+/*craete nested gallery*/
+	.innergallery {
+	margin:0;
+	padding:0;
+	background:#000;
+	width:100%;
+	height:500px;
+	display:box;
+	box-orient: vertical;
+	display:-webkit-box;
+	-webkit-box-orient: vertical;
+	display: -moz-box;
+	-moz-box-orient: vertical;
+}
+.innergallery > div {
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	background:#09F;
+}
+.innergallery > div:nth-child(1) {
+	background:#CFC url(http://farm1.static.flickr.com/45/181248771_5473f694bb_b.jpg) no-repeat;
+}
+.innergallery > div:nth-child(2) {
+	background:#FCC url(http://farm4.static.flickr.com/3248/2786241330_b9bb2bb61d_b.jpg) no-repeat;
+}
+.innergallery > div:nth-child(3) {
+	background:#CFF url(http://farm4.static.flickr.com/3206/2988137900_f17c13443f_b.jpg) no-repeat;
+}
+.innergallery > div:nth-child(4) {
+	background:#FCF url(http://farm4.static.flickr.com/3206/2988137900_f17c13443f_b.jpg) no-repeat;
+}
+/*navigation*/
+nav.flex {
+	position: static;
+}
+nav.flex ol {
+	margin:0;
+	padding:0;
+	list-style:none;
+	width:800px;
+	display:box;
+	box-orient: horizontal;
+	display:-webkit-box;
+	-webkit-box-orient: horizontal;
+	display: -moz-box;
+	-moz-box-orient: horizontal;
+}
+nav.flex ol > li {
+	box-flex:1;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	transition:all 0.3s ease-out;
+	-webkit-transition:all 0.3s ease-out;
+	-moz-transition:all 0.3s ease-out;
+	min-width:70px;
+	padding:8px 0 8px 20px;
+	background:#87C813;
+	color:#fff;
+	text-decoration:none;
+	text-shadow: 0 0 5px #888;
+	border-radius:10px 3px / 30px 3px;
+	-moz-border-radius:10px 3px / 30px 3px;
+	-webkit-border-radius:10px 3px / 30px 3px;
+	text-align:center;
+	border:1px solid white;
+	border:1px 0 0 2px;
+}
+nav.flex ol > li:hover, nav.flex ol > li:focus {
+	background:#c9eb51;
+	width:200px;
+	-moz-box-flex:2.0;
+	-webkit-box-flex:2.0;
+	box-flex:2.0;
+}
+nav.flex a {
+	display: inline-block;
+	width: 100%;
+	white-space: nowrap;
+	color: #fff;
+	text-decoration: none;
+}
+nav.flex a:hover, nav.flex a:active, nav.flex a:focus {
+	background:transparent;
+}
+.gallery {
+	position:static;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+
+dt, dd{
+	display: inline;
+}
+</style>
+<% end %>
+
+
+<p>To fully enjoy the experience use an updated <strong>Webkit browser (Safari, Chrome)</strong>. It works acceptably fine in Firefox 3.5+, Safari 4+, Chrome 5+. <em>It does not work on IE nor on Opera.</em></p>
+
+<h3>What is the Flexible box model?</h3>
+<br>
+<dt>Flexible box model</dt>
+<dd>
+  <p>is a new CSS box model, that determines how the boxes are distributed inside other boxes and the way they share the available space.</p>
+  <p>You can read the <a href="http://www.w3.org/TR/css3-flexbox/">specification here</a>.</p>
+</dd>
+<br>
+<h3>Flexible navigation with CSS3 | (no images, no Javascript)</h3>
+<br>
+<nav class="flex">
+  <ol>
+    <li><a href="#">Uno</a></li>
+    <li><a href="#">Dos</a></li>
+    <li><a href="#">Tres</a></li>
+    <li><a href="#">Cuatro</a></li>
+    <li><a href="#">Cinco</a></li>
+  </ol>
+</nav>
+<br>
+
+<h3>Nice flexible gallery with transition on rollover (no Javascript)</h3>
+<br>
+<div class="gallery">
+  <div>
+    <div class="innergallery">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<a class="returnbtn" href="/">Return to the experiments gallery</a> 

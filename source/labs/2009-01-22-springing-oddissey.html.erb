@@ -7,8 +7,7 @@ end_path:
 ---
 
 <% content_for :head do %>
-<script src="/javascripts/swfobject_modified.js" type="text/javascript"></script>
-</head>
+<%= javascript_include_tag "swfobject_modified" %>
 <% end %>
 <% content_for :header do %>
 Springing Oddissey <small>Gravitational attraction</small>
@@ -17,8 +16,8 @@ Springing Oddissey <small>Gravitational attraction</small>
 This animation is caused by the gravitational attraction between two objects. The closer the objects are, the stronger their acceleration towards each other.
 <% end %>
 
+
 <section id="lablong">
-           <a class="returnbtn" href="/">Return to the experiments gallery</a>
         <figure class="lablongfigure">
           <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="600" height="400" id="FlashID" title="Springing Oddissey">
             <param name="movie" value="SpringingOddissey.swf">
@@ -69,3 +68,6 @@ This animation is caused by the gravitational attraction between two objects. Th
       }
         </pre>
   <a class="returnbtn" href="/">Return to the experiments gallery</a>
+  <script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>

@@ -6,3 +6,52 @@ description: A physics application of the law of conservation of momentum and ki
 end_path: 
 ---
 
+
+<% content_for :header do %>
+	Collisions <small>Conservation of momentum</small>
+<% end %>
+<% content_for :intro do %>
+    This simulation applies the law of conservation of momentum to determine the new speed and direction of a ball that collides against another.
+<% end %>
+
+<% content_for :head do %>
+<%= javascript_include_tag "swfobject_modified" %>
+<% end %>
+
+
+<a class="returnbtn" href="/">Return to the experiments gallery</a>
+      <p class="moreinfo">The law of conservation of momentum states that the momentum of two objects before collision is equal to the momentum of both objects after the collision.</p>
+      <p class="moreinfo">The momentum of a single object is its mass times its velocity (p = m * v). Its kinetic energy is half the mass times the square of the velocity (K = <sup>1</sup>&frasl;<sub>2</sub> m * v<sup>2</sup>).</p>
+        <figure class="lablongfigure">
+          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="600" height="400" id="FlashID" title="Conservation of momentum">
+            <param name="movie" value="Momemtumconservation.swf">
+            <param name="quality" value="high">
+            <param name="wmode" value="transparent">
+            <param name="swfversion" value="6.0.65.0">
+            <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+            <param name="expressinstall" value="/javascripts/expressInstall.swf">
+            <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+            <!--[if !IE]>-->
+            <object type="application/x-shockwave-flash" data="Momemtumconservation.swf" width="600" height="400">
+              <!--<![endif]-->
+              <param name="quality" value="high">
+              <param name="wmode" value="opaque">
+              <param name="swfversion" value="6.0.65.0">
+              <param name="expressinstall" value="/javascripts/expressInstall.swf">
+              <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+              <div>
+                <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+              </div>
+              <!--[if !IE]>-->
+            </object>
+            <!--<![endif]-->
+          </object>
+        </figure>
+        <a href="Momentum.zip" class="downloadSource" type="file">Dowload source code</a>
+  </section>
+  <br><br>
+  <a class="returnbtn" href="/">Return to the experiments gallery</a>
+	<script type="text/javascript">
+	swfobject.registerObject("FlashID");
+	</script>
