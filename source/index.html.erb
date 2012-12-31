@@ -1,22 +1,46 @@
----
-pageable: true
-per_page: 10
----
-<% if paginate %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
+<% content_for :header, "Pedro Kostelec" %>
+<% content_for :intro do %>
+Hello, my name is Pedro Kostelec and I'm a <span itemprop="title">programmer, designer and student at the <span itemprop="affiliation">University of Ljubljana</span>, <span itemprop="country-name">Slovenia</span></span>.
 <% end %>
 
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <p><%= article.summary %></p>
-<% end %>
+<section id="contact">
+	<h1 class="section">Contact</h1>
+    <ul>
+    	<li id="mail">
+    		<a href="mailto:web@pedro.si?subject=Hi!" title="Send me an email" target="_blank"><span  class="icons mailIcon"></span>E-mail
+            <span class="subdesc">Say Hi!</span></a></li>
+            <li id="linkedin"><a href="http://www.linkedin.com/in/pedrokostelec" target="_blank" title="Visit my LinkedIn profile" rel="prefetch"><span class="icons linkedinIcon"></span>LinkedIn
+            <span class="subdesc">Connect to me</span></a>
+        </li>
+    </ul>
+</section>
 
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<section id="content">
+	<h1 class="section">Labs</h1>
+    <article>
+		<% page_articles.each_with_index do |article, i| %>
+			<%
+				url_path = article.data.end_path
+				unless url_path
+					url_path = article.url  #/labs/2011/xp-memorial.html
+					# url_path.gsub!(".html", "/") #/labs/2011/xp-memorial/
+				end
+			%>
+			<% link_to url_path, title: article.title do %> 
+				<div class="experiment">
+                  <h4><%= article.title %></h4>
+                  <div class="tools">
+                  	<% article.tags.each do |tag| %>
+                  		<div class="<%= tag.downcase %>"><%= tag %></div>
+                  	<% end %>
+                  </div>
+                  <figure class="experFig">
+                  	<%= image_tag article.url[0..-6] + "/thumbnail.png", width:64, height: 64, alt: article.title %>
+                  </figure>
+                  <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
+                  <p><%= article.data.description %></p>
+                </div>
+			<% end %>
+		<% end %>
+    </article>
+</section>
