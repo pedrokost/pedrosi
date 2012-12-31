@@ -1,7 +1,7 @@
 activate :blog do |blog|
   blog.prefix = "labs"
   blog.permalink = ":year/:title.html"
-  blog.sources = "/labs/:year-:month-:day-:title/index.html"
+  blog.sources = "/labs/:year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   blog.layout = "experiment_layout"
   # blog.summary_separator = /(READMORE)/
