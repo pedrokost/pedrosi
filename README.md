@@ -1,12 +1,16 @@
-# Middleman on Heroku
-### precompiled and served statically
+# pedro.si
 
-## Usage
+Welcome to the repository of my presentational website accessible at pedro.si. 
 
-    $ git clone http://github.com/indirect/middleman-heroku-static-app.git mysite
-    $ cd mysite
-    $ heroku create --stack cedar --buildpack http://github.com/indirect/heroku-buildpack-middleman.git
-    $ git push heroku master
+The website in build on Middleman
+
+## Middleman on Heroku
+
+### Setup
+
+    # To host a middleman app on Heroku, you need to use a custom buildpack. 
+	$ heroku config:add BUILDPACK_URL=http://github.com/rstacruz/heroku-buildpack-middleman.git
+	# ... and then republish your app so it's built.
 
 The only expectation is that `middleman build` will generate your site into `./build`. That's where Rack::TryStatic will look.
 
