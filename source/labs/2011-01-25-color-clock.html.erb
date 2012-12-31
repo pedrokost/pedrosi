@@ -1,0 +1,121 @@
+---
+title: Color clock
+date: 2011-01-25
+tags: Javascript, CSS3
+description: Current time converted to a hexadecimal value.
+end_path: 
+---
+
+
+<% content_for :header, current_page.data.title %>
+<% content_for :intro do %>
+The background of this clock is defined by the current time.
+<% end %>
+
+<% content_for :head do %>
+<style>
+.lablongfigure{
+	background-image: -webkit-radial-gradient(rgba(256,256,256,0.2), rgba(256,256,256,0));  
+	background-image: -moz-radial-gradient(rgba(256,256,256,0.2), rgba(256,256,256,0)); 
+	transition: background 5s ease-out;	 
+	-webkit-transition: background 5s ease-out;
+	-moz-transition: background 5s ease-out;
+	-o-transition: background 5s ease-out;
+}
+#colorclock{
+	height:400px;
+	color:#FFF;
+	font-family:"PT Sans", Helvetica, Arial,  sans-serif;
+	font-weight:bold;
+	font-size:8em;
+	line-height:400px;
+	-webkit-text-stroke: 1px #333;
+	-webkit-text-fill-color: #FFF;
+}
+#clockdesc{
+	font-family:Nobile, Arial, Helvetica, sans-serif;
+	font-size:0.7em;
+	position:absolute;
+	top:0;
+	left:0;
+	padding: 10px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#666;
+	color:rgba(256,256,256,0.5);
+	width:100%;
+	text-align:left;
+}
+#showColor{
+	font-family:"Courier New", Courier, monospace;
+	font-size:2em;
+	color:#666;
+	color:rgba(256,256,256,0.8);
+	display:block;
+	padding:10px;
+	position:absolute;
+}
+	#showColor.red{background:#FF0000;}
+	#showColor.green{background:#00FF00;}
+	#showColor.blue{background:#0000FF;}
+</style>
+
+<% end %>
+
+
+
+<section id="lablong">
+      
+      <figure class="lablongfigure" id="clockHolder">
+	      <span id="clockdesc">Representing time as a hexadecimal color value <span id="showColor">#<span class="red">Javascript in your browser is not working as it should. Maybe your browser is just too old. Upgrade it or install a better browser, such as <a href="http://www.google.com/chrome/intl/en/landing_chrome.html">Google Chrome</a>. Then remember to come back and enjoy.</span><span class="green"></span><span class="blue"></span></span></span>
+	      
+	      <span id="colorclock">12:00:00</span>
+      </figure>
+  </section>
+  <div id="Hexvalues"></div>
+  <p class="moreinfo">The logic of the application is simple: <code>time.toString(16)</code> which returns a Hexadecimal value. The actual implementation is sligthtly more complex, so be sure to check the source if you are interested.</p>
+  <a class="returnbtn" href="../../laboratory.html">Return to the experiments gallery</a>
+</div>
+<script>
+window.onload = start();
+var interval;
+function start(){
+	setClock(); 
+	interval = setInterval(setClock, 1000);
+}
+
+function setClock(){
+	var d = new Date();
+	var h = d.getHours();
+	if (h<10) h="0"+h;
+	if(h==0) h=12;
+	var m = d.getMinutes();
+	if (m<10) m="0"+m;
+	var s = d.getSeconds();
+	if (s<10) s="0"+s;
+	var timestr = h + ":" + m + ":" + s;
+	
+	document.getElementById("colorclock").firstChild.nodeValue = timestr;
+	var red = ((6*h + 70).toString(16).length < 2) ? "0"+ (6*h + 70).toString(16) : (6*h + 70).toString(16);
+	var green = ((3*m + 50).toString(16).length < 2) ? "0"+(3*m + 50).toString(16) : (3*m + 50).toString(16);
+	var blue = ((3*s + 50).toString(16).length < 2) ? "0"+ (3*s + 50).toString(16) : (3*s + 50).toString(16);
+	var newColor = red + green + blue;
+	document.getElementsByClassName("red").item(0).style.background = "#" + red + "0000";
+	document.getElementsByClassName("red").item(0).innerHTML = red;
+	document.getElementsByClassName("green").item(0).style.background = "#00" + green + "00";
+	document.getElementsByClassName("green").item(0).innerHTML = green;
+	document.getElementsByClassName("blue").item(0).style.background = "#0000" + blue;
+	document.getElementsByClassName("blue").item(0).innerHTML = blue;
+	
+	if(newColor != undefined){
+		//alert(document.getElementsByClassName("lablongfigure"));
+		var clockHolder = document.getElementById("clockHolder");
+		clockHolder.style.background = "#"+newColor;	
+		clockHolder.style.backgroundImage = "-webkit-radial-gradient(rgba(256,256,256,.5), rgba(256,256,256,0))";
+		clockHolder.style.backgroundImage = "-moz-radial-gradient(rgba(256,256,256,.5), rgba(256,256,256,0))";
+	}
+}
+</script>
+
+
+
