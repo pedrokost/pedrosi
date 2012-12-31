@@ -7,7 +7,7 @@ gem 'rack-contrib'
 
 # gem 'therubyracer', :platform => :ruby
 
-  gem 'uglifier'
+gem 'uglifier'
 
 group :development do
 	gem "wdm"
