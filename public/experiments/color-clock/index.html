@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Color Clock | Experiments</title>
+<meta http-equiv="X-UA-Compatible" content="chrome=1" /> 
+<meta content="This page feature experiments by Pedro Damian Kostelec. The color clock experiment is a clock whose background changes with the current time." name="description">
+<link rel="shortcut icon" href="../../assets/images/favicon_16px.png">
+<meta content="flash, java, HTML5, CSS, video, animation, experiments, lab, labs" name="keywords">
+<link rel="stylesheet" href="../../assets/css/style0-1-1.css" type="text/css" media="screen">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans:regular|Nobile:bold|Copse|Josefin+Slab:lightitalic,regular">
+<!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style>
+.lablongfigure{
+	background-image: -webkit-radial-gradient(rgba(256,256,256,0.2), rgba(256,256,256,0));  
+	background-image: -moz-radial-gradient(rgba(256,256,256,0.2), rgba(256,256,256,0)); 
+	transition: background 5s ease-out;	 
+	-webkit-transition: background 5s ease-out;
+	-moz-transition: background 5s ease-out;
+	-o-transition: background 5s ease-out;
+}
+#colorclock{
+	height:400px;
+	color:#FFF;
+	font-family:"PT Sans", Helvetica, Arial,  sans-serif;
+	font-weight:bold;
+	font-size:8em;
+	line-height:400px;
+	-webkit-text-stroke: 1px #333;
+	-webkit-text-fill-color: #FFF;
+}
+#clockdesc{
+	font-family:Nobile, Arial, Helvetica, sans-serif;
+	font-size:0.7em;
+	position:absolute;
+	top:0;
+	left:0;
+	padding: 10px;
+	text-align:center;
+	text-transform:uppercase;
+	color:#666;
+	color:rgba(256,256,256,0.5);
+	width:100%;
+	text-align:left;
+}
+#showColor{
+	font-family:"Courier New", Courier, monospace;
+	font-size:2em;
+	color:#666;
+	color:rgba(256,256,256,0.8);
+	display:block;
+	padding:10px;
+	position:absolute;
+}
+	#showColor.red{background:#FF0000;}
+	#showColor.green{background:#00FF00;}
+	#showColor.blue{background:#0000FF;}
+</style>
+</head>
+
+<body>
+<div id="headerArea">
+  <header>
+    <h1>Colorclock</h1>
+  </header>
+</div>
+<div id="wrapper">
+  <div id="labEprouvette"></div>
+  <nav> <a href="../../index.php">
+    <div id="homeBar">Home<span class="icons homeIcon"></span></div>
+    </a> <a href="../../laboratory.html">
+    <div id="labsBar">Labs<span class="icons labIcon"></span></div>
+    </a> <a href="http://blog.pedro.si">
+    <div id="blogBar">Blog<span class="icons blogIcon"></span></div>
+    </a> </nav>
+  <section id="lablong">
+      <p>The background of this clock is defined by the current time.</p>
+     <a class="returnbtn" href="../../laboratory.html">Return to the experiments gallery</a>
+      
+      <p class="moreinfo">The logic of the application is simple: <code>time.toString(16)</code> which returns a Hexadecimal value. The actual implementation is sligthtly more complex, so be sure to check the source if you are interested.</p>
+      <figure class="lablongfigure" id="clockHolder">
+      <span id="clockdesc">Representing time as a hexadecimal color value <span id="showColor">#<span class="red">Javascript in your browser is not working as it should. Maybe your browser is just too old. Upgrade it or install a better browser, such as <a href="http://www.google.com/chrome/intl/en/landing_chrome.html">Google Chrome</a>. Then remember to come back and enjoy.</span><span class="green"></span><span class="blue"></span></span></span>
+      
+      <span id="colorclock">12:00:00</span>
+      </figure>
+  </section>
+  <div id="Hexvalues"></div>
+  <a class="returnbtn" href="../../laboratory.html">Return to the experiments gallery</a>
+  <footer> <small>copyrigth 2010, <span itemprop="name">Pedro Damian Kostelec</span>, <a href="http://pedro.si" itemprop="url">pedro.si</a></small> </footer>
+</div>
+<script>
+window.onload = start();
+var interval;
+function start(){
+	setClock(); 
+	interval = setInterval(setClock, 1000);
+}
+
+function setClock(){
+	var d = new Date();
+	var h = d.getHours();
+	if (h<10) h="0"+h;
+	if(h==0) h=12;
+	var m = d.getMinutes();
+	if (m<10) m="0"+m;
+	var s = d.getSeconds();
+	if (s<10) s="0"+s;
+	var timestr = h + ":" + m + ":" + s;
+	
+	document.getElementById("colorclock").firstChild.nodeValue = timestr;
+	var red = ((6*h + 70).toString(16).length < 2) ? "0"+ (6*h + 70).toString(16) : (6*h + 70).toString(16);
+	var green = ((3*m + 50).toString(16).length < 2) ? "0"+(3*m + 50).toString(16) : (3*m + 50).toString(16);
+	var blue = ((3*s + 50).toString(16).length < 2) ? "0"+ (3*s + 50).toString(16) : (3*s + 50).toString(16);
+	var newColor = red + green + blue;
+	document.getElementsByClassName("red").item(0).style.background = "#" + red + "0000";
+	document.getElementsByClassName("red").item(0).innerHTML = red;
+	document.getElementsByClassName("green").item(0).style.background = "#00" + green + "00";
+	document.getElementsByClassName("green").item(0).innerHTML = green;
+	document.getElementsByClassName("blue").item(0).style.background = "#0000" + blue;
+	document.getElementsByClassName("blue").item(0).innerHTML = blue;
+	
+	if(newColor != undefined){
+		//alert(document.getElementsByClassName("lablongfigure"));
+		var clockHolder = document.getElementById("clockHolder");
+		clockHolder.style.background = "#"+newColor;	
+		clockHolder.style.backgroundImage = "-webkit-radial-gradient(rgba(256,256,256,.5), rgba(256,256,256,0))";
+		clockHolder.style.backgroundImage = "-moz-radial-gradient(rgba(256,256,256,.5), rgba(256,256,256,0))";
+	}
+}
+</script>
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19545605-1']);
+  _gaq.push(['_setDomainName', '.pedro.si']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script> 
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<script>
+	//generate the facebook like button
+	(function(){
+		var pos = document.getElementsByClassName("returnbtn").item(0);
+		if(pos != null){
+			var url = document.location.toString();
+			var slashi = url.lastIndexOf("/");
+			var urlEnd = url.slice(slashi + 1);
+			if(urlEnd == "index.html" || urlEnd == "index.htm" || urlEnd == "index.php")
+				url = url.slice(0, slashi + 1);
+	
+			
+			var fbLike = document.createElement("fb:like");
+			fbLike.setAttribute("href", url);
+			fbLike.setAttribute("show_faces", "false");
+			fbLike.setAttribute("layout", "button_count");
+			fbLike.style.position = "absolute";
+			fbLike.style.display = "block";
+			fbLike.style.float = "right";
+			fbLike.style.right = 100 + "px";
+			pos.parentNode.insertBefore(fbLike, pos);
+		}
+	})();
+</script>
+</body>
+</html>

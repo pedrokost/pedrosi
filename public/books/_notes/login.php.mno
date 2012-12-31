@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsBooksFavorite" value="name:Title;datatype:string,name:Author;datatype:string,name:Rating;datatype:real" />
+</info>
