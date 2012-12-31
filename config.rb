@@ -36,7 +36,7 @@ end
 # Page options, layouts, aliases and proxies
 ###
 page "*", layout: :full_layout
-page "/feed.xml", :layout => false
+# page "/feed.xml", :layout => false
 # Per-page layout changes:
 #
 # With no layout

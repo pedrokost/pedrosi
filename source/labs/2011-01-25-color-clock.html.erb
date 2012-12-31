@@ -7,14 +7,12 @@ end_path:
 ---
 
 
-<%# content_for :header do %> 
-current_page.data.title
-<%# end %>
-<%# content_for :intro do %>
+<% content_for :header, current_page.data.title %>
+<% content_for :intro do %>
 The background of this clock is defined by the current time.
-<%# end %>
+<% end %>
 
-<%# content_for :head do %>
+<% content_for :head do %>
 <style>
 .lablongfigure{
 	background-image: -webkit-radial-gradient(rgba(256,256,256,0.2), rgba(256,256,256,0));  
@@ -62,7 +60,7 @@ The background of this clock is defined by the current time.
 	#showColor.blue{background:#0000FF;}
 </style>
 
-<%# end %>
+<% end %>
 
 
 
