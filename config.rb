@@ -1,7 +1,7 @@
 activate :blog do |blog|
   blog.prefix = "labs"
-  blog.permalink = ":year/:title.html"
-  blog.sources = "/labs/:year-:month-:day-:title.html"
+  blog.permalink = ":year/:title/index.html"
+  # blog.sources = "/labs/:year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
   blog.layout = "experiment_layout"
   # blog.summary_separator = /(READMORE)/
@@ -11,8 +11,8 @@ activate :blog do |blog|
   # blog.day_link = ":year/:month/:day.html"
   blog.default_extension = ".erb"
 
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
+  # blog.tag_template = "tag.html"
+  # blog.calendar_template = "calendar.html"
 
   # blog.paginate = true
   # blog.per_page = 10
