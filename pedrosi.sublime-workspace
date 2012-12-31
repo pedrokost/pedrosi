@@ -276,64 +276,35 @@
 	"buffers":
 	[
 		{
-<<<<<<< HEAD
 			"file": "source/labs/2011-02-02-pong-in-2-5d.html.erb",
 			"settings":
 			{
 				"buffer_size": 3595,
-=======
-			"file": "Gemfile",
-			"settings":
-			{
-				"buffer_size": 758,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 				"line_ending": "Unix"
 			}
 		},
 		{
-<<<<<<< HEAD
 			"file": "source/labs/2011-02-02-pong-in-2-5d/pong.html",
 			"settings":
 			{
 				"buffer_size": 6247,
-=======
-			"file": "public/index.html",
-			"settings":
-			{
-				"buffer_size": 5468,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 				"line_ending": "Windows"
 			}
 		},
 		{
-<<<<<<< HEAD
 			"file": ".gitignore",
 			"settings":
 			{
 				"buffer_size": 163,
-=======
-			"file": "public/laboratory.html",
-			"settings":
-			{
-				"buffer_size": 7967,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 				"line_ending": "Windows"
 			}
 		},
 		{
-<<<<<<< HEAD
 			"file": "Gemfile",
 			"settings":
 			{
 				"buffer_size": 213,
 				"line_ending": "Windows"
-=======
-			"file": "/home/flape/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 385,
-				"line_ending": "Unix"
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 			}
 		}
 	],
@@ -437,7 +408,6 @@
 	},
 	"file_history":
 	[
-<<<<<<< HEAD
 		"/E/Dropbox/Websites/pedrosi/source/index.html.erb",
 		"/E/Dropbox/Websites/pedrosi/build/labs/2009/springing-oddissey/index.html",
 		"/E/Dropbox/Websites/pedrosi/build/labs/2010/snowfall-particle-system/index.html",
@@ -517,8 +487,6 @@
 		"/E/Dropbox/Websites/pedrosi_rails/Gemfile",
 		"/E/Dropbox/Websites/pedrosi/source/2012-01-01-example-article.html.markdown",
 		"/home/flape/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-=======
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 		"/media/Data/Dropbox/Websites/pedrosi/public/experiments.html",
 		"/media/Data/Dropbox/Websites/pedrosi/.git/COMMIT_EDITMSG",
 		"/media/Data/Dropbox/Websites/pedrosi/Gemfile.lock",
@@ -567,90 +535,7 @@
 		"/media/Data/Dropbox/Websites/did_i_read/app/models/author.rb",
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/books/edit.html.erb",
 		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/edit.html.erb",
-<<<<<<< HEAD
 		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120809182306_add_author_id_to_book.rb"
-=======
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120809182306_add_author_id_to_book.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/users_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/book_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120916194918_add_isbn_to_books.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120918131355_add_index_books_on_isbn_unique.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20121004175336_remove_index_isbn_on_books.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/book.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/layouts/application.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/Gemfile",
-		"/media/Data/Dropbox/Websites/did_i_read/config/initializers/simple_form.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/locales/simple_form.en.yml",
-		"/media/Data/Dropbox/Websites/did_i_read/lib/templates/erb/scaffold/_form.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/note_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/note.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/schema.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/pages.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/.rspec",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/user_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/navigation.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/layouts/_header.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/shelves.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_logo.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/bin/rspec",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_tag.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/pages/home.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/helpers/application_helper_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/tag_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/helpers/application_helper.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/log/development.log",
-		"/media/Data/Dropbox/Websites/did_i_read/log/bullet.log",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/tag.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930150924_cache_notes_count.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930150208_add_notes_count_to_tags.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930144305_cache_books_count.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/users/show.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_error_messages.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/show.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/models/user.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/_author.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/authors/index.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/authors_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120930144205_add_books_count_to_authors.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/environments/development.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/initializers/bullet.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/page_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/authentication_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/requests/notes_pages_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/responsive.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/support/utilities.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/sessions/new.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/b.log",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/pages.css.scss.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/yetting.yml",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_shelf.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/index.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/models/tag_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/_shelf.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/notes/new.html.erb",
-		"/home/flape/Documents/test.html",
-		"/media/Data/Dropbox/Websites/did_i_read/db/migrate/20120928195216_add_editorial_review_on_books.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/helpers/books_helper.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/initializers/carrierwave.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/db/seeds.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/lib/tasks/sample_data.rake",
-		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/assets/C4F/A50/sprockets%2F52b01d14b637a6cd781081686264288e",
-		"/media/Data/Dropbox/Websites/did_i_read/config/application.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/tags_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/create.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/controllers/tags_controller_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/factories.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/config/routes.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/users/new.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/users/_fields.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/notes.css.scss",
-		"/media/Data/Dropbox/Websites/did_i_read/app/controllers/notes_controller.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/spec/helpers/tags_helper_spec.rb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/shared/_shelve.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/app/views/tags/_tag.html.erb",
-		"/media/Data/Dropbox/Websites/did_i_read/tmp/cache/sass/62939eb9d13112d9f523532aff49b86cb0c95d34/tags.css.scssc",
-		"/media/Data/Dropbox/Websites/did_i_read/app/assets/stylesheets/tags.css.scss"
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 	],
 	"find":
 	{
@@ -658,11 +543,7 @@
 	},
 	"find_in_files":
 	{
-<<<<<<< HEAD
 		"height": 90.0,
-=======
-		"height": 0.0,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 		"where_history":
 		[
 			"E:\\Dropbox\\Websites\\pedrosi",
@@ -860,86 +741,51 @@
 	"groups":
 	[
 		{
-<<<<<<< HEAD
 			"selected": 3,
-=======
-			"selected": 1,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 			"sheets":
 			[
 				{
 					"buffer": 0,
-<<<<<<< HEAD
 					"file": "source/labs/2011-02-02-pong-in-2-5d.html.erb",
 					"settings":
 					{
 						"buffer_size": 3595,
-=======
-					"file": "Gemfile",
-					"settings":
-					{
-						"buffer_size": 758,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								3185,
 								3185
-=======
-								563,
-								563
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 594.0,
-=======
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-<<<<<<< HEAD
 					"file": "source/labs/2011-02-02-pong-in-2-5d/pong.html",
 					"settings":
 					{
 						"buffer_size": 6247,
-=======
-					"file": "public/index.html",
-					"settings":
-					{
-						"buffer_size": 5468,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								0,
 								0
-=======
-								2805,
-								2805
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 							]
 						],
 						"settings":
@@ -949,46 +795,29 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-<<<<<<< HEAD
 						"translation.y": 0.0,
-=======
-						"translation.y": 840.0,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-<<<<<<< HEAD
 					"file": ".gitignore",
 					"settings":
 					{
 						"buffer_size": 163,
-=======
-					"file": "public/laboratory.html",
-					"settings":
-					{
-						"buffer_size": 7967,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								163,
 								163
-=======
-								1859,
-								1859
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -1003,53 +832,19 @@
 					"settings":
 					{
 						"buffer_size": 213,
-=======
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 144.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 3,
-					"file": "/home/flape/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-					"settings":
-					{
-						"buffer_size": 385,
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-<<<<<<< HEAD
 								213,
 								213
-=======
-								129,
-								129
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 							]
 						],
 						"settings":
 						{
-<<<<<<< HEAD
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-=======
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1110,7 +905,6 @@
 		"selected_items":
 		[
 			[
-<<<<<<< HEAD
 				"ignore",
 				"pedrosi/.gitignore"
 			],
@@ -1169,23 +963,12 @@
 			[
 				"index.html",
 				"pedrosi_rails/public/index.html"
-=======
-				"labor",
-				"public/laboratory.html"
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 			],
 			[
 				"expe",
 				"public/experiments.html"
 			],
 			[
-<<<<<<< HEAD
-=======
-				"index",
-				"public/index.html"
-			],
-			[
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 				"gemlo",
 				"Gemfile.lock"
 			],
@@ -1632,61 +1415,6 @@
 			[
 				"applicaionhtmlerb",
 				"app/views/layouts/application.html.erb"
-<<<<<<< HEAD
-=======
-			],
-			[
-				"seed",
-				"db/seeds.rb"
-			],
-			[
-				"sampleda",
-				"lib/tasks/sample_data.rake"
-			],
-			[
-				"app",
-				"config/application.rb"
-			],
-			[
-				"tagrb",
-				"app/models/tag.rb"
-			],
-			[
-				"yett",
-				"config/yetting.yml"
-			],
-			[
-				"bookfie",
-				"app/views/books/_fields.html.erb"
-			],
-			[
-				"tagcont",
-				"app/controllers/tags_controller.rb"
-			],
-			[
-				"erro",
-				"app/views/shared/_error_messages.html.erb"
-			],
-			[
-				"shareerr",
-				"app/views/shared/_error_messages.html.erb"
-			],
-			[
-				"fact",
-				"spec/factories.rb"
-			],
-			[
-				"shelvcss",
-				"app/assets/stylesheets/shelves.css.scss"
-			],
-			[
-				"userfie",
-				"app/views/users/_fields.html.erb"
-			],
-			[
-				"usernew",
-				"app/views/users/new.html.erb"
->>>>>>> f16ca636b2ac1ce4e678298954a337d0606f3d8a
 			]
 		],
 		"width": 0.0
