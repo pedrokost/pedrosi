@@ -19,20 +19,24 @@ Hello, my name is Pedro Kostelec and I'm a <span itemprop="title">programmer, de
 	<h1 class="section">Labs</h1>
     <article>
 		<% page_articles.each_with_index do |article, i| %>
-			<% link_to article, title: article.title do %> 
+      <%
+        url_path = article.data.end_path
+        url_path ||= article
+      %>
+			<% link_to url_path, title: article.title do %> 
 				<div class="experiment">
-                  <h4><%= article.title %></h4>
-                  <div class="tools">
-                  	<% article.tags.each do |tag| %>
-                  		<div class="<%= tag.downcase %>"><%= tag %></div>
-                  	<% end %>
-                  </div>
-                  <figure class="experFig">
-                  	<%= image_tag article.url + "thumbnail.png", width:64, height: 64, alt: article.title %>
-                  </figure>
-                  <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
-                  <p><%= article.data.description %></p>
-                </div>
+            <h4><%= article.title %></h4>
+            <div class="tools">
+            	<% article.tags.each do |tag| %>
+            		<div class="<%= tag.downcase %>"><%= tag %></div>
+            	<% end %>
+            </div>
+            <figure class="experFig">
+            	<%= image_tag article.url + "thumbnail.png", width:64, height: 64, alt: article.title %>
+            </figure>
+            <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
+            <p><%= article.data.description %></p>
+          </div>
 			<% end %>
 		<% end %>
     </article>
