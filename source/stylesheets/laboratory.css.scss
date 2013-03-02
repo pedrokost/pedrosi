@@ -70,6 +70,7 @@
 	}
 	.experiment p{
 		margin: 0;	
+		width: 100%;
 	}
 	.experFig {
 		position:absolute;
@@ -88,7 +89,7 @@
 		padding:0;
 		position:static;
 	}
-		.flash, .svg, .php, .html5, .css, .js, .javascript, .mysql, .css3, .xml{
+		.flash, .svg, .php, .html5, .css, .js, .javascript, .mysql, .css3, .xml, .rails, .postgres{
 			background:#F06;
 			display:inline-block;
 			margin:0 1px;
@@ -96,15 +97,16 @@
 			width:auto;
 			
 			border-radius:1px;
-			-moz-border-radius:1px;
 		}
+			.rails{background:#A9262D;}
 			.flash{background:#BD0A09;}
 			.svg{background:#FE9900;}
 			.php{background:#7880B1;}
-			.html5{background:#58F;}
+			.html5{background:#F16529; }
 			.css, .css3{background:#660;}
-			.js, .javascript{background:#F30;}
+			.js, .javascript{background:#222;}
 			.mysql{background:#063;}
+			.postgres{background:#0094C7;}
 			.xml {background: purple;}
 		
 #labEprouvette{

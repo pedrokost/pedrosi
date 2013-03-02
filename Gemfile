@@ -10,6 +10,7 @@ gem 'rack-contrib'
 gem 'uglifier'
 
 
-group :development do
-	gem "wdm"
+group :development, :assets do
+	# gem "wdm"
+	gem 'therubyracer', :platform => :ruby
 end
