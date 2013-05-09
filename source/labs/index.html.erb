@@ -1,0 +1,50 @@
+---
+layout: layout
+---
+<% content_for :head do %>
+
+<%= javascript_include_tag 'libs/jquery-2.0.0' %>
+<%= javascript_include_tag 'libs/handlebars-1.0.0-rc.3' %>
+<%= javascript_include_tag 'libs/ember-1.0.0-rc.3' %>
+<%= javascript_include_tag 'libs/ember-data-2013-5-9' %>
+<%= javascript_include_tag 'labs' %>
+
+<style>
+	body{
+		padding: 0 100px;
+	}
+</style>
+<% end %>
+
+
+<script type="text/x-handlebars" data-template-name="application">
+    <h1>Labs</h1>
+    <hr>
+    <p>{{ outlet }}</p>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+	
+</script>
+
+<script type="text/x-handlebars" data-template-name="labs">
+	<ul>
+		{{#each model}}
+			<li>
+			{{#linkTo 'labs.lab' this}}
+				{{title}}{{date}}
+			{{/linkTo}}
+			</li>
+		{{/each}}
+	</ul>
+	{{ outlet }}
+</script>
+
+<script type="text/x-handlebars" data-template-name="labs/lab">
+	{{title}} <br>
+	{{date}} <br>
+	{{tags}} <br>
+	{{description}} <br>
+	{{endPath}} <br>
+	{{ outlet }}
+</script>

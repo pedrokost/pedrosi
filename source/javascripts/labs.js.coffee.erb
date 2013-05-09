@@ -1,0 +1,38 @@
+App = Ember.Application.create()
+
+App.Router.map ->
+	@resource 'labs', ->
+		@route 'lab', 
+			path: ':lab_id'
+
+App.IndexRoute = Ember.Route.extend
+	redirect: ->
+		@transitionTo 'labs'
+
+App.LabsRoute = Ember.Route.extend
+	model: ->
+		App.Lab.find()
+
+App.Store = DS.Store.extend
+	revision: 12,
+	adapter: 'DS.FixtureAdapter'
+
+App.Lab = DS.Model.extend
+	title: DS.attr('string')
+	date: DS.attr('date')
+	tags: DS.attr('string')
+	description: DS.attr('string')
+	endPath: DS.attr('string')
+
+App.Lab.FIXTURES = [
+	<% page_articles.each_with_index do |article, i| %>
+	id: <%= "\"#{i}\"" %>
+	title: <%= "\"#{article.title}\"" %>
+	date: <%= "\"#{article.date}\"" %>
+	tags: <%= "#{article.tags}" %>
+	description: <%= "\"#{article.data.description}\"" %>
+	endPath: <%= "\"#{article.data.end_path}\"" %>
+,
+	<% end %>
+]
+
