@@ -13,6 +13,19 @@ App.LabsRoute = Ember.Route.extend
 	model: ->
 		App.Lab.find()
 
+# App.LabsIndexRoute = Ember.Route.extend
+# 	redirect: ->
+# 		lab = this.modelFor('labs').get('firstObject')
+# 		@transitionTo 'labs.lab', lab
+
+
+
+App.LabsLabController = Ember.ObjectController.extend
+	url: Ember.computed(->
+		endPath = this.get('content.endPath')
+		endPath || this.get('content.url')
+		).property('content.url', 'content.endPath')
+
 App.Store = DS.Store.extend
 	revision: 12,
 	adapter: 'DS.FixtureAdapter'
@@ -40,3 +53,12 @@ App.Lab.FIXTURES = [
 	<% end %>
 ]
 
+#  usage: {{fromNow date}}
+Ember.Handlebars.registerBoundHelper 'fromNow', (date)->
+	moment(date).fromNow()
+
+Ember.Handlebars.registerBoundHelper 'makeTags', (tags)->
+	allTags = ""
+	tags.forEach (tag) ->
+		allTags += "<div class='#{tag.toLowerCase()}'>#{tag}</div>"
+	new Handlebars.SafeString allTags

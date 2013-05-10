@@ -24,19 +24,19 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
         url_path ||= article
       %>
 			<% link_to url_path, title: article.title do %> 
-				<div class="experiment">
-            <h4><%= article.title %></h4>
-            <div class="tools">
-            	<% article.tags.each do |tag| %>
-            		<div class="<%= tag.downcase %>"><%= tag %></div>
-            	<% end %>
+			<div class="experiment">
+                <h4><%= article.title %></h4>
+                <div class="tools">
+                	<% article.tags.each do |tag| %>
+                		<div class="<%= tag.downcase %>"><%= tag %></div>
+                	<% end %>
+                </div>
+                <figure class="experFig">
+                	<%= image_tag article.url + "thumbnail.png", width:64, height: 64, alt: article.title %>
+                </figure>
+                <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
+                <p><%= article.data.description %></p>
             </div>
-            <figure class="experFig">
-            	<%= image_tag article.url + "thumbnail.png", width:64, height: 64, alt: article.title %>
-            </figure>
-            <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
-            <p><%= article.data.description %></p>
-          </div>
 			<% end %>
 		<% end %>
     </article>

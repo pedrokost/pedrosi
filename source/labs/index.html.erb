@@ -4,6 +4,7 @@ layout: layout
 <% content_for :head do %>
 
 <%= javascript_include_tag 'libs/jquery-2.0.0' %>
+<%= javascript_include_tag 'libs/moment.min' %>
 <%= javascript_include_tag 'libs/handlebars-1.0.0-rc.3' %>
 <%= javascript_include_tag 'libs/ember-1.0.0-rc.3' %>
 <%= javascript_include_tag 'libs/ember-data-2013-5-9' %>
@@ -17,30 +18,42 @@ layout: layout
 </script>
 
 <script type="text/x-handlebars" data-template-name="labs">
-	<nav class="gallery">
-		<ul>
-			{{#each model}}
-				<li>
-				{{#linkTo 'labs.lab' this}}
-					<figure>
-						<img {{bindAttr src="thumbnail" alt="title"}} width="60"/>
-					</figure>
-					<span class="title">{{title}}</span>
-					<span class="date">{{date}}</span>
-				{{/linkTo}}
-				</li>
-			{{/each}}
-		</ul>
-	</nav>
-
-	{{ outlet }}
+	<div class="gallery">
+		<nav class="gallery-nav">
+			<a class="brand pull-left" href="/" title="Home">
+				Pedro<br>Kostelec
+			</a>
+			<ul>
+				{{#each model}}
+					<li>
+					{{#linkTo 'labs.lab' this}}
+						<figure>
+							<img {{bindAttr src="thumbnail" alt="title"}} width="60"/>
+						</figure>
+						<span class="title">{{title}}</span>
+						<span class="date">{{fromNow date}}</span>
+					{{/linkTo}}
+					</li>
+				{{/each}}
+			</ul>
+		</nav>
+		{{ outlet }}
+	</div>
 </script>
 
+
 <script type="text/x-handlebars" data-template-name="labs/lab">
-	{{title}} <br>
-	{{date}} <br>
-	{{tags}} <br>
-	{{description}} <br>
-	{{endPath}} <br>
-	{{ outlet }}
+	<div class="lab-description">
+		<span class="description">{{description}}</span>
+		<div class="tools">
+			{{makeTags tags}}
+		</div>
+		{{#if endPath}}
+			<a {{bindAttr href="endPath"}} target="_blank" class="external-link">Open in new tab</a>
+		{{/if}}
+	</div>
+
+	<div class="viewer">
+		<iframe {{bindAttr src="url"}}></iframe>
+	</div>
 </script>

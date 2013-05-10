@@ -4,12 +4,17 @@
 $countLabs: 12;
 $labWidth: (100%/$countLabs);
 $scaleFactor: 1.2;
+$navHeight: 76px;
+$subNavHeight: 40px;
 
 $red: #902028;
+$white: #DDD;
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-nav.gallery {
+html, body{padding: 0;margin:0;overflow-y:hidden;}
+
+nav.gallery-nav {
 	background: #222;
 	width: 100%;
 	margin: 0;
@@ -18,7 +23,7 @@ nav.gallery {
 	padding-top: 0;
 
 	ul {
-		height: 76px;
+		height: $navHeight;
 		overflow: hidden;
 		&:hover, &:active {
 			li{ 
@@ -62,13 +67,63 @@ nav.gallery {
 		}
 	}
 
-	// .title, .date{float: left;}
 	.title {
-		color: #DDD;
+		font-weight: bold;
+		color: $white;
 	}
 
 	.date {
-		color: #777;
+		color: darken($white, 30%);
 		display: block;
+		margin-top: 0.5em;
+	}
+}
+
+.brand {
+	height: 100%;
+	line-height: ($navHeight / 3);
+	margin: ($navHeight / 6);
+	margin-right: 40px;
+	color: $red;
+	font-weight: bold;
+	font-size: 1rem;
+	
+	&:hover {
+		background: transparent;
+		color: $white;
+	}
+}
+
+.pull-left {
+	float: left;
+}
+
+.gallery {
+	.viewer {
+		position:absolute;
+		width: 100%;
+		top: $navHeight + $subNavHeight;
+		bottom: 0;
+
+		iframe {
+			border:0;
+			width:100%;
+			height:100%
+		}
+	}
+
+	.lab-description {
+		background: $red;
+		color: $white;
+		height: $subNavHeight;
+		line-height: $subNavHeight;
+		padding: 0 ($navHeight / 6);
+	}
+
+	.external-link {
+		color: $white;
+		float: right;
+		text-decoration: none;
+		&:hover{text-decoration: underline;}
 	}
 }
