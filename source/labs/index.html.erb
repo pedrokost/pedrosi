@@ -8,35 +8,31 @@ layout: layout
 <%= javascript_include_tag 'libs/ember-1.0.0-rc.3' %>
 <%= javascript_include_tag 'libs/ember-data-2013-5-9' %>
 <%= javascript_include_tag 'labs' %>
-
-<style>
-	body{
-		padding: 0 100px;
-	}
-</style>
+<%= stylesheet_link_tag 'labs' %>
 <% end %>
 
-
-<script type="text/x-handlebars" data-template-name="application">
-    <h1>Labs</h1>
-    <hr>
-    <p>{{ outlet }}</p>
-</script>
 
 <script type="text/x-handlebars" data-template-name="index">
 	
 </script>
 
 <script type="text/x-handlebars" data-template-name="labs">
-	<ul>
-		{{#each model}}
-			<li>
-			{{#linkTo 'labs.lab' this}}
-				{{title}}{{date}}
-			{{/linkTo}}
-			</li>
-		{{/each}}
-	</ul>
+	<nav class="gallery">
+		<ul>
+			{{#each model}}
+				<li>
+				{{#linkTo 'labs.lab' this}}
+					<figure>
+						<img {{bindAttr src="thumbnail" alt="title"}} width="60"/>
+					</figure>
+					<span class="title">{{title}}</span>
+					<span class="date">{{date}}</span>
+				{{/linkTo}}
+				</li>
+			{{/each}}
+		</ul>
+	</nav>
+
 	{{ outlet }}
 </script>
 

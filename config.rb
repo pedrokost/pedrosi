@@ -1,3 +1,6 @@
+# require 'lib/imager.rb'
+# activate :imager
+
 activate :blog do |blog|
   blog.prefix = "labs"
   blog.permalink = ":year/:title/index.html"

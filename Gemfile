@@ -5,6 +5,8 @@ gem "middleman-blog", "~> 3.1.1"
 # gem 'middleman-livereload', '~> 3.0.1'
 gem "builder", "~> 3.0.0"
 gem 'rack-contrib'
+gem 'bourbon'
+# gem "rmagick", "~> 2.13.1"
 
 # gem 'therubyracer', :platform => :ruby
 

@@ -23,6 +23,8 @@ App.Lab = DS.Model.extend
 	tags: DS.attr('string')
 	description: DS.attr('string')
 	endPath: DS.attr('string')
+	url: DS.attr('string')
+	thumbnail: DS.attr('string')
 
 App.Lab.FIXTURES = [
 	<% page_articles.each_with_index do |article, i| %>
@@ -32,6 +34,8 @@ App.Lab.FIXTURES = [
 	tags: <%= "#{article.tags}" %>
 	description: <%= "\"#{article.data.description}\"" %>
 	endPath: <%= "\"#{article.data.end_path}\"" %>
+	url: <%= "\"#{article.url}\"" %>
+	thumbnail: <%= "\"#{article.url}thumbnail.png\"" %>
 ,
 	<% end %>
 ]
