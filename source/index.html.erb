@@ -15,14 +15,16 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
     </ul>
 </section>
 
+
+
 <section id="content">
 	<h1 class="section">Labs</h1>
     <article>
 		<% page_articles.each_with_index do |article, i| %>
-      <%
-        url_path = article.data.end_path
-        url_path ||= article
-      %>
+        <%
+            url_path = article.data.end_path
+            url_path ||= article
+        %>
 			<% link_to url_path, title: article.title do %> 
 			<div class="experiment">
                 <h4><%= article.title %></h4>
@@ -32,7 +34,7 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
                 	<% end %>
                 </div>
                 <figure class="experFig">
-                	<%= image_tag article.url + "thumbnail.png", width:64, height: 64, alt: article.title %>
+                    <%= image_for article, :width => 64, alt: article.title %>
                 </figure>
                 <time datetime="<%= article.date.iso8601 %>"><%= time_ago_in_words article.date.iso8601 %> ago</time>
                 <p><%= article.data.description %></p>

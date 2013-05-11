@@ -6,7 +6,7 @@ gem "middleman-blog", "~> 3.1.1"
 gem "builder", "~> 3.0.0"
 gem 'rack-contrib'
 gem 'bourbon'
-# gem "rmagick", "~> 2.13.1"
+gem "rmagick", "~> 2.13.1", :require => 'RMagick'
 
 # gem 'therubyracer', :platform => :ruby
 

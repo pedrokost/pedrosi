@@ -5,5 +5,6 @@ Pedro.si:
     ☐ Redirect from labs/ to labs/0
     ☐ labs order specific
     ☐ image resize automatic
-
+    ☐ Compile all js into one file. and minify.
+    ☐ Maybe use ember.min for production
  

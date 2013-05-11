@@ -72,11 +72,11 @@ nav.gallery-nav {
 			border-radius: 0;
 		}
 		&.active{
-			border-bottom: 4px solid $red;
 			width: $usefulUlWidth - ($countLabs - 1) * ($labWidth);
 
 			& > a{
 				background: $red;
+				border-bottom: 4px solid $red;
 			}
 		}
 

@@ -51,9 +51,7 @@ layout: layout
 		<div class="tools">
 			{{makeTags tags}}
 		</div>
-		{{#if endPath}}
-			<a {{bindAttr href="endPath"}} target="_blank" class="external-link">Open in new tab</a>
-		{{/if}}
+		<a {{bindAttr href="url"}} target="_blank" class="external-link">Open in new tab</a>
 	</div>
 
 	<div class="viewer">

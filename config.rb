@@ -1,6 +1,56 @@
 # require 'lib/imager.rb'
 # activate :imager
 
+require 'base64'
+require 'RMagick'
+# include Magick
+
+helpers do
+  def image(name, options={})
+    if options[:path_given]
+      path = name
+    else
+      path = "source/images/#{name}"
+    end
+    img  = Magick::Image::read(path)[0]
+
+    resized_img_name = "thumbnail_compiled.png"
+    # resize to a fixed width when needed
+    if options[:width]
+      img.resize_to_fill!(options[:width])
+      resized_img_name = "thumbnail_compiled_#{options[:width]}.png"
+    end
+    if options[:path_given]
+      save_to_dir = "#{options[:save_to_dir]}"
+    else
+      save_to_dir = "/images/#{options[:save_to_dir]}"
+
+    end
+    load_from_dir = "#{options[:load_from_dir]}"
+    img.write "source/#{save_to_dir}#{resized_img_name}"
+
+    alt = "alt=\"#{options[:alt]}\"" if options[:alt]
+    width = "width=\"#{options[:width]}\"" if options[:width]
+    data = Base64.encode64(img.to_blob)
+    # str  = "<img src=\"\"/>"
+
+    str = "<img #{alt} #{width} src=\"data:image/jpeg;base64,#{data}\"/>"
+    str.gsub!(/\n/, '')
+    str
+  end
+
+  def image_for(article, options={})
+    path = article.eponymous_directory_path
+    # /
+    img = Dir.glob("source/#{path}thumbnail.{jpg,jpeg,png,JPG,JPEG,PNG}")[0]
+    options[:path_given] = true
+    options[:save_to_dir] = "#{path}"
+    options[:load_from_dir] = article.url
+    image(img, options)
+  end
+end
+
+
 activate :blog do |blog|
   blog.prefix = "labs"
   blog.permalink = ":year/:title/index.html"
