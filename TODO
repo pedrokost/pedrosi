@@ -4,7 +4,10 @@ Pedro.si:
   Ember gallery:
     ☐ Redirect from labs/ to labs/0
     ☐ labs order specific
-    ☐ image resize automatic
     ☐ Compile all js into one file. and minify.
     ☐ Maybe use ember.min for production
  
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ image resize automatic @done (13-05-11 15:38)
