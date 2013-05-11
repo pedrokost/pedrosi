@@ -76,7 +76,7 @@ nav.gallery-nav {
 			width: $usefulUlWidth - ($countLabs - 1) * ($labWidth);
 
 			& > a{
-				background: #000;
+				background: $red;
 			}
 		}
 
