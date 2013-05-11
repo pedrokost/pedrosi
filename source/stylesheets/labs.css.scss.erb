@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
 
-$countLabs: <%= page_articles.size %>;
+$countLabs: <%= page_articles.size + 1 %>;
 $brandWidth: 10%;
 $galleryNavWidth: 100%-$brandWidth;
 $usefulUlWidth: 100%;
@@ -167,5 +167,11 @@ nav.gallery-nav {
 		float: right;
 		text-decoration: none;
 		&:hover{text-decoration: underline;}
+	}
+	.help {
+		text-align: center;
+		line-height: 8rem;
+		display: block;
+		width: 100%;
 	}
 }

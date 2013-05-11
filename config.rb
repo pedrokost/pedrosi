@@ -30,7 +30,8 @@ helpers do
     data = Base64.encode64(img.to_blob)
     # str  = "<img src=\"\"/>"
 
-    str = "<img #{alt} #{width} src=\"data:image/jpeg;base64,#{data}\"/>"
+    # str = "<img #{alt} #{width} src=\"data:image/jpeg;base64,#{data}\"/>"
+    str = "<img #{alt} #{width} src=\"#{load_from_dir}#{resized_img_name}\"/>"
     str.gsub!(/\n/, '')
     str
   end
@@ -131,15 +132,15 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
-  # activate :minify_html
+  activate :minify_html
 
   # Enable cache buster
-  # activate :cache_buster
+  activate :cache_buster
 
   # Use relative URLs
   # activate :relative_assets
