@@ -1,8 +1,10 @@
+//= require html5reset-1.6.1
+//= require laboratory
 @charset "utf-8";
 
+// @import "html5reset-1.6.1";
+// @import "laboratory";
 
-@import "html5reset-1.6.1.css";
-@import "laboratory.css";
 
 /*Alignement*/
 body{
@@ -409,6 +411,10 @@ nav{
 	z-index:1;
 	text-transform:uppercase;
 	width:75px;
+
+	&.labs_index {
+		top:240px;
+	}
 }
 
 nav a{
@@ -527,11 +533,13 @@ article a{
 nav{
 	
 }
+$red: #902028;
+$white: #DDD;
 
 /*SELECTION***************************/
 ::selection {
-        background: rgb(131,209,222); /* Safari */
-		color:#336;
+        background: darken($red, 10%);// rgb(131,209,222); /* Safari */
+		color:$white;
 }
 ::-moz-selection {
         background: rgb(131,209,222); /* Firefox */

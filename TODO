@@ -4,10 +4,11 @@ Pedro.si:
   Ember gallery:
     ☐ Redirect from labs/ to labs/0
     ☐ labs order specific
-    ☐ Compile all js into one file. and minify.
-    ☐ Maybe use ember.min for production
  
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ navigation @done (13-05-11 17:09)
+ ✔ Maybe use ember.min for production @done (13-05-11 16:37)
+ ✔ Compile all js into one file. and minify. @done (13-05-11 16:37)
  ✔ image resize automatic @done (13-05-11 15:38)

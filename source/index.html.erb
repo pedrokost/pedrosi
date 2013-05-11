@@ -24,6 +24,7 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
         <%
             url_path = article.data.end_path
             url_path ||= article
+            url_path = "/labs#/labs/#{i}"
         %>
 			<% link_to url_path, title: article.title do %> 
 			<div class="experiment">

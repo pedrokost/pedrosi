@@ -1,9 +1,5 @@
-# require 'lib/imager.rb'
-# activate :imager
-
 require 'base64'
 require 'RMagick'
-# include Magick
 
 helpers do
   def image(name, options={})
@@ -43,13 +39,17 @@ helpers do
     path = article.eponymous_directory_path
     # /
     img = Dir.glob("source/#{path}thumbnail.{jpg,jpeg,png,JPG,JPEG,PNG}")[0]
-    options[:path_given] = true
-    options[:save_to_dir] = "#{path}"
-    options[:load_from_dir] = article.url
-    image(img, options)
+
+    if img
+      options[:path_given] = true
+      options[:save_to_dir] = "#{path}"
+      options[:load_from_dir] = article.url
+      return image(img, options)
+    else
+      return
+    end
   end
 end
-
 
 activate :blog do |blog|
   blog.prefix = "labs"
@@ -131,10 +131,12 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript
+
+  # activate :minify_html
 
   # Enable cache buster
   # activate :cache_buster
