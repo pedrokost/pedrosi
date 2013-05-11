@@ -13,13 +13,6 @@ App.LabsRoute = Ember.Route.extend
 	model: ->
 		App.Lab.find()
 
-# App.LabsIndexRoute = Ember.Route.extend
-# 	redirect: ->
-# 		lab = this.modelFor('labs').get('firstObject')
-# 		@transitionTo 'labs.lab', lab
-
-
-
 App.LabsLabController = Ember.ObjectController.extend
 	url: Ember.computed(->
 		endPath = this.get('content.endPath')

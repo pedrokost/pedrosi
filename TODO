@@ -1,3 +1,9 @@
 Pedro.si:
   validate markup
+
+  Ember gallery:
+    ☐ Redirect from labs/ to labs/0
+    ☐ labs order specific
+    ☐ image resize automatic
+
  

@@ -2,8 +2,11 @@
 
 
 $countLabs: 12;
-$labWidth: (100%/$countLabs);
+$brandWidth: 10%;
+$galleryNavWidth: 100%-$brandWidth;
+$usefulUlWidth: 100%;
 $scaleFactor: 1.2;
+$labWidth: ($usefulUlWidth/$countLabs/$scaleFactor);
 $navHeight: 76px;
 $subNavHeight: 40px;
 
@@ -21,13 +24,27 @@ nav.gallery-nav {
 	padding: 0;
 	position: static;
 	padding-top: 0;
-
-	ul {
-		height: $navHeight;
+	float: left;
+	overflow:hidden;
+	height: $navHeight;
+	
+	.labHolder{
+		width: $galleryNavWidth;
+		float: left;
+		position: relative;
 		overflow: hidden;
-		&:hover, &:active {
-			li{ 
-				width: $labWidth/$scaleFactor;
+		height: 100%;
+		// height: $navHeight;
+	}
+	ul {
+		height: 100%;
+		width: ((100%/$usefulUlWidth) * 100%);
+		&:hover {
+			li, li.active{ 
+				width: $labWidth;
+			}
+			li:hover {
+				width: $usefulUlWidth - ($countLabs - 1) * ($labWidth);
 			}
 		}
 	}
@@ -37,28 +54,30 @@ nav.gallery-nav {
 		width: $labWidth;
 		height: 100%;
 		float: left;
-		background: #222;
+		background: #222999;
 		text-transform: none;
 		@include transition(width 0.2s ease-out);
 		border-radius: 0;
-		overflow: hidden;
+		
 
 		& > a {
 			display: block;
-			width: 500px;
+			min-width: 250px;
+			background: #222;
 			height: 100%;
 			border: 4px solid transparent;
 			border-left-width: 0;
 			border-right-width: 0;
 			padding: 4px 8px;
 			border-radius: 0;
-			&.active{
-				border-bottom: 4px solid $red;
-			}
 		}
+		&.active{
+			border-bottom: 4px solid $red;
+			width: $usefulUlWidth - ($countLabs - 1) * ($labWidth);
 
-		&:hover {
-			width: 100% - ($countLabs - 1) * ($labWidth / $scaleFactor) !important;
+			& > a{
+				background: #000;
+			}
 		}
 
 		figure {
@@ -82,11 +101,12 @@ nav.gallery-nav {
 .brand {
 	height: 100%;
 	line-height: ($navHeight / 3);
-	margin: ($navHeight / 6);
-	margin-right: 40px;
+	margin: 0;
+	padding: ($navHeight / 6);
 	color: $red;
 	font-weight: bold;
 	font-size: 1rem;
+	width: $brandWidth;
 	
 	&:hover {
 		background: transparent;
@@ -118,6 +138,7 @@ nav.gallery-nav {
 		height: $subNavHeight;
 		line-height: $subNavHeight;
 		padding: 0 ($navHeight / 6);
+		clear: both;
 	}
 
 	.external-link {

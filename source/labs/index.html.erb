@@ -17,25 +17,28 @@ layout: layout
 	
 </script>
 
+
 <script type="text/x-handlebars" data-template-name="labs">
 	<div class="gallery">
 		<nav class="gallery-nav">
 			<a class="brand pull-left" href="/" title="Home">
 				Pedro<br>Kostelec
 			</a>
-			<ul>
-				{{#each model}}
-					<li>
-					{{#linkTo 'labs.lab' this}}
-						<figure>
-							<img {{bindAttr src="thumbnail" alt="title"}} width="60"/>
-						</figure>
-						<span class="title">{{title}}</span>
-						<span class="date">{{fromNow date}}</span>
-					{{/linkTo}}
-					</li>
-				{{/each}}
-			</ul>
+			<div class="labHolder">
+				<ul>
+					{{#each model}}
+						{{#linkTo 'labs.lab' this tagName="li" href=false}}
+						<a {{bindAttr href=view.href}}>
+							<figure>
+								<img {{bindAttr src="thumbnail" alt="title"}} width="60"/>
+							</figure>
+							<span class="title">{{title}}</span>
+							<span class="date">{{fromNow date}}</span>
+						</a>
+						{{/linkTo}}
+					{{/each}}
+				</ul>
+			</div>
 		</nav>
 		{{ outlet }}
 	</div>
