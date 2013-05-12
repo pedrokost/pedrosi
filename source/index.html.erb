@@ -22,9 +22,10 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
     <article>
 		<% page_articles.each_with_index do |article, i| %>
         <%
+
             url_path = article.data.end_path
             url_path ||= article
-            url_path = "/labs#/labs/#{i}"
+            url_path = "/labs#/labs/#{page_articles.size - i - 1}"
         %>
 			<% link_to url_path, title: article.title do %> 
 			<div class="experiment">
