@@ -39,9 +39,8 @@ App.Lab = DS.Model.extend
 	thumbnail: DS.attr('string')
 
 App.Lab.FIXTURES = [
-	<% i = page_articles.size %>
-	<% page_articles.each do |article| %>
-	id: <%= "\"#{i}\"" %>
+	<% page_articles.each_with_index do |article, index| %>
+	id: "<%= page_articles.size - index - 1 %>"
 	title: <%= "\"#{article.title}\"" %>
 	date: <%= "\"#{article.date}\"" %>
 	tags: <%= "#{article.tags}" %>
@@ -49,7 +48,6 @@ App.Lab.FIXTURES = [
 	endPath: <%= "\"#{article.data.end_path}\"" %>
 	url: <%= "\"#{article.url}\"" %>
 	thumbnail: <%= "\"#{article.url}thumbnail_compiled_64.png\"" %>
-	<% i-=1 %>
 ,
 	<% end %>
 ]
