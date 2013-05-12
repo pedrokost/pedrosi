@@ -4,6 +4,7 @@ Pedro.si:
   Ember gallery:
     ☐ Redirect from labs/ to labs/0
     ☐ labs order specific
+    ☐ Sort gallery on date field, dont' rely on correct ID order.
  
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
