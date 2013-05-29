@@ -1,6 +1,8 @@
 Pedro.si:
   validate markup
 
+  SEO:
+    ☐ Markup with Microdata. https://www.google.com/search?q=ilya+grigorik&oq=ilya+grigorik
   Ember gallery:
     ☐ Redirect from labs/ to labs/0
     ☐ labs order specific

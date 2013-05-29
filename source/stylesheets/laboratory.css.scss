@@ -88,8 +88,9 @@
 		margin:0;
 		padding:0;
 		position:static;
-	}
-		.flash, .svg, .emberjs, .php, .html5, .css, .js, .javascript, .mysql, .css3, .xml, .rails, .postgres{
+
+		.tool {
+
 			background:#F06;
 			display:inline-block;
 			margin:0 1px;
@@ -98,16 +99,18 @@
 			
 			border-radius:1px;
 		}
-			.rails{background:#A9262D;}
-			.flash{background:#BD0A09;}
-			.svg{background:#FE9900;}
-			.php{background:#7880B1;}
-			.html5{background:#F16529; }
-			.css, .css3{background:#660;}
-			.js, .javascript, .emberjs{background:#222;}
-			.mysql{background:#063;}
-			.postgres{background:#0094C7;}
-			.xml {background: purple;}
+		
+		.rails{background:#A9262D;}
+		.flash{background:#BD0A09;}
+		.svg{background:#FE9900;}
+		.php{background:#7880B1;}
+		.html5, .middleman{background:#F16529; }
+		.css, .css3{background:#660;}
+		.js, .javascript, .emberjs{background:#222;}
+		.mysql{background:#063;}
+		.postgres{background:#0094C7;}
+		.xml {background: purple;}
+	}
 		
 #labEprouvette{
 	background:url(../images/Labs.png) no-repeat;

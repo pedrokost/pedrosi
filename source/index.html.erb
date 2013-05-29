@@ -32,7 +32,7 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
                 <h4><%= article.title %></h4>
                 <div class="tools">
                 	<% article.tags.each do |tag| %>
-                		<div class="<%= tag.downcase %>"><%= tag %></div>
+                		<div class="tool <%= tag.downcase %>"><%= tag %></div>
                 	<% end %>
                 </div>
                 <figure class="experFig">
