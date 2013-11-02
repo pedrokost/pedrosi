@@ -1,5 +1,5 @@
 Pedro.si:
-  validate markup
+  ☐ validate markup
 
   SEO:
     ☐ Markup with Microdata. https://www.google.com/search?q=ilya+grigorik&oq=ilya+grigorik
@@ -7,6 +7,7 @@ Pedro.si:
     ☐ Redirect from labs/ to labs/0
     ☐ labs order specific
     ☐ Sort gallery on date field, dont' rely on correct ID order.
+    ☐ Time ago doesn't work correctly. For recent articles it shows 20h ago.
  
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
