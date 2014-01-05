@@ -1,15 +1,20 @@
 source "https://rubygems.org"
 
-gem "middleman", "~> 3.0.13"
-gem "middleman-blog", "~> 3.2.0"
+ruby '2.1.0'
+
+gem 'puma',      '~> 2.7'
+gem 'rake',      '~> 10.1'
+
+gem "middleman", "~> 3.2.1"
+gem "middleman-blog", "~> 3.5.0"
 # gem 'middleman-livereload', '~> 3.0.1'
-gem "builder", "~> 3.0.0"
+gem "builder", "~> 3.2.2"
 # gem 'rack-contrib'
 gem 'bourbon'
 gem "rmagick", "~> 2.13.1", :require => 'RMagick'
 gem 'middleman-minify-html'
 gem 'rb-inotify', '~> 0.9'
-gem 'json', '~> 1.7.7'
+gem 'json', '~> 1.8.1'
 
 
 # gem 'therubyracer', :platform => :ruby
