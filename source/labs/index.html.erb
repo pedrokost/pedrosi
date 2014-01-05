@@ -67,8 +67,25 @@ layout: layout
 		</div>
 		<a {{bindAttr href="url"}} target="_blank" class="external-link">Open in new tab</a>
 	</div>
+	{{view App.LabViewerView url=url}}
+</script>
 
-	<div class="viewer">
-		<iframe {{bindAttr src="url"}}></iframe>
-	</div>
+<script type="text/x-handlebars" data-template-name="lab_viewer">
+	{{#if view.loading}}
+		<div class="Center-Container">
+			<div class="spinner Absolute-Center is-Fixed">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
+		</div>
+	{{/if}}
+	{{#if view.corsProtected}}
+		<div class="viewer-newtab-container Center-Container">
+			<a class="returnbtn viewer-newtab Absolute-Center is-Fixed" {{bind-attr href=url}}>Open in new tab</a>
+		</div>
+	{{/if}}
+	{{#if view.contentOK}}
+		<iframe {{bind-attr src=url}}></iframe>
+	{{/if}}	
 </script>

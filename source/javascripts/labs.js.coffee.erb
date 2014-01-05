@@ -1,10 +1,12 @@
-//= require "libs/jquery-2.0.0.min"
-//= require "libs/moment.min"
-//= require "libs/handlebars-1.0.0-rc.3"
-//= require "libs/ember-1.0.0-rc.3.min"
-//= require "libs/ember-data-2013-5-10.min"
+#= require "libs/jquery-1.10.2"
+#= require "libs/moment.min"
+#= require "libs/handlebars-v1.1.2"
+#= require "libs/ember.prod"  
+#= require "libs/ember-data.prod"
 
-App = Ember.Application.create()
+window.App = Ember.Application.create()
+
+App.ApplicationAdapter = DS.FixtureAdapter.extend()
 
 App.Router.map ->
 	@resource 'labs', ->
@@ -17,26 +19,62 @@ App.IndexRoute = Ember.Route.extend
 
 App.LabsRoute = Ember.Route.extend
 	model: ->
-		App.Lab.find()
+		@get('store').find('lab')
 
 App.LabsLabController = Ember.ObjectController.extend
+
 	url: Ember.computed(->
+		# Em.run.schedule @, ->
+
 		endPath = this.get('content.endPath')
 		endPath || this.get('content.url')
-		).property('content.url', 'content.endPath')
+	).property('content.url', 'content.endPath')
 
-App.Store = DS.Store.extend
-	revision: 12,
-	adapter: 'DS.FixtureAdapter'
+
+
+App.LabViewerView = Ember.View.extend
+	loading: true
+	corsProtected: false
+	contentOK: false
+	templateName: 'lab_viewer'
+	classNames: ['viewer']
+	attributeBindings: ['url']
+	url: 'http://pedro.si'
+	checkCORSProtection: (->
+		url = @get('url')
+		that = @
+
+		Ember.run.once this, ->
+			@set 'loading', true
+			@set 'corsProtected', false
+			@set 'contentOK', false
+		
+		console.info('checking cors protection', url)
+		Em.$.get(url)
+			.error (a, b, c, d) ->
+				Ember.run.once ->
+					that.set 'loading', false
+					that.set 'corsProtected', true
+					that.set 'contentOK', false
+			.success (a, b,c,d) ->
+				Ember.run.once ->
+					that.set 'loading', false
+					that.set 'corsProtected', false
+					that.set 'contentOK', true
+
+		).observes('url').on('didInsertElement')
+
+
+
 
 App.Lab = DS.Model.extend
-	title: DS.attr('string')
-	date: DS.attr('date')
-	tags: DS.attr('string')
+	title:       DS.attr('string')
+	date:        DS.attr('date')
+	tags:        DS.attr('string')
 	description: DS.attr('string')
-	endPath: DS.attr('string')
-	url: DS.attr('string')
-	thumbnail: DS.attr('string')
+	endPath:     DS.attr('string')
+	url:         DS.attr('string')
+	thumbnail:   DS.attr('string')
 
 App.Lab.FIXTURES = [
 	<% page_articles.each_with_index do |article, index| %>
