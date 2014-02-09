@@ -31,7 +31,8 @@ helpers do
     # str  = "<img src=\"\"/>"
 
     # str = "<img #{alt} #{width} src=\"data:image/jpeg;base64,#{data}\"/>"
-    str = "<img #{alt} #{width} src=\"#{load_from_dir}#{resized_img_name}\"/>"
+    str = "<img #{alt} #{width} src=\"#{load_from_dir}index/#{resized_img_name}\"/>"
+    # str = "<img #{alt} #{width} src=\"/labs/2014/test/index/#{resized_img_name}\"/>"
     str.gsub!(/\n/, '')
     str
   end
@@ -153,6 +154,8 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
+
+activate :directory_indexes
 
 # activate :livereload
 
