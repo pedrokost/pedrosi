@@ -8,15 +8,7 @@
 	<div id="wrapper">
     <h2><%= yield_content(:intro)%></h2>
     <nav>
-    	<% link_to "/" do %>
-  	  		<div id="homeBar">Home<span class="icons homeIcon"></span></div>
-    	<% end %>
-    	<% link_to "http://blog.pedro.si" do %>
-		    <div id="blogBar">Blog<span class="icons blogIcon"></span></div>
-    	<% end %>
-        <% link_to "/cv.html" do %>
-            <div id="labsBar">CV<span class="icons labIcon"></span></div>
-        <% end %>
+    	<%= partial "shared/navlinks" %>
     </nav>
 
     <%= yield %>

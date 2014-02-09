@@ -3,33 +3,25 @@ layout: layout
 ---
 <% content_for :head do %>
 
-<%# javascript_include_tag 'libs/jquery-2.0.0' %>
-<%# javascript_include_tag 'libs/moment.min' %>
-<%# javascript_include_tag 'libs/handlebars-1.0.0-rc.3' %>
-<%# javascript_include_tag 'libs/ember-1.0.0-rc.3' %>
-<%# javascript_include_tag 'libs/ember-data-2013-5-9' %>
-<%= javascript_include_tag 'labs' %>
-<%= stylesheet_link_tag 'labs' %>
+	<%# javascript_include_tag 'libs/jquery-2.0.0' %>
+	<%# javascript_include_tag 'libs/moment.min' %>
+	<%# javascript_include_tag 'libs/handlebars-1.0.0-rc.3' %>
+	<%# javascript_include_tag 'libs/ember-1.0.0-rc.3' %>
+	<%# javascript_include_tag 'libs/ember-data-2013-5-9' %>
+	<%= javascript_include_tag 'labs' %>
+	<%= stylesheet_link_tag 'labs' %>
 <% end %>
 
 <nav class="labs_index">
-	<% link_to "/" do %>
-	  		<div id="homeBar">Home<span class="icons homeIcon"></span></div>
-	<% end %>
-	<% link_to "http://blog.pedro.si" do %>
-	    <div id="blogBar">Blog<span class="icons blogIcon"></span></div>
-	<% end %>
-    <% link_to "/cv.html" do %>
-        <div id="labsBar">CV<span class="icons labIcon"></span></div>
-    <% end %>
+	<%= partial "shared/navlinks" %>
 </nav>
 
-<script type="text/x-handlebars" data-template-name="index">
+<script type="text/x-handlebars" data-no-instant data-template-name="index">
 	
 </script>
 
 
-<script type="text/x-handlebars" data-template-name="labs">
+<script type="text/x-handlebars" data-no-instant data-template-name="labs">
 	<div class="gallery">
 		<nav class="gallery-nav">
 			<a class="brand pull-left" href="/" title="Home">
@@ -54,12 +46,12 @@ layout: layout
 		{{ outlet }}
 	</div>
 </script>
-<script type="text/x-handlebars" data-template-name="labs/index">
+<script type="text/x-handlebars" data-no-instant data-template-name="labs/index">
 	<span class="help">Select an experiment above</span>
 </script>
 
 
-<script type="text/x-handlebars" data-template-name="labs/lab">
+<script type="text/x-handlebars" data-no-instant data-template-name="labs/lab">
 	<div class="lab-description">
 		<span class="description">{{description}}</span>
 		<div class="tools">
@@ -70,7 +62,7 @@ layout: layout
 	{{view App.LabViewerView url=url}}
 </script>
 
-<script type="text/x-handlebars" data-template-name="lab_viewer">
+<script type="text/x-handlebars" data-no-instant data-template-name="lab_viewer">
 	{{#if view.loading}}
 		<div class="Center-Container">
 			<div class="spinner Absolute-Center is-Fixed">

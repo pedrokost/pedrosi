@@ -27,7 +27,7 @@ Hi, I'm Pedro Kostelec, <span itemprop="title">web developer and designer, inter
             url_path ||= article
             url_path = "/labs#/labs/#{page_articles.size - i - 1}"
         %>
-			<% link_to url_path, title: article.title do %> 
+			<% link_to url_path, title: article.title, :'data-instant' => true do %> 
 			<div class="experiment">
                 <h4><%= article.title %></h4>
                 <div class="tools">

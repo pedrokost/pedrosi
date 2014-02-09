@@ -9,31 +9,36 @@
 
     <link rel="shortcut icon" href="assets/images/favicon_16px.png">
     
+
+
+  </head>
+  <body>
     <!--[if IE]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <%= stylesheet_link_tag "style" %> 
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans:regular|Josefin+Slab:lightitalic" %>
-
     <%= yield_content(:head)%>
-  </head>
-  <body>
     
     <%= yield %>
-
-    <script type="text/javascript">
+  
+    <%= javascript_include_tag 'libs/instantclick.min.js', :'data-no-instant' => true %>
+    <script type="text/javascript" data-no-instant>
      var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-19545605-1']);
       _gaq.push(['_setDomainName', '.pedro.si']);
       _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+      
+      InstantClick.on('change', function() {
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        // ga('send', 'pageview', location.pathname + location.search);
+      });
     </script> 
-    
+    <script>InstantClick.init();</script>
+
   </body>
 </html>
