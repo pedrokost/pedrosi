@@ -6,7 +6,7 @@ gem 'puma',      '~> 2.7'
 gem 'rake',      '~> 10.1'
 
 gem "middleman", "~> 3.2.1"
-gem "middleman-blog", "~> 3.5.0"
+gem "middleman-blog", "~> 3.5.1"
 # gem 'middleman-livereload', '~> 3.0.1'
 gem "builder", "~> 3.2.2"
 # gem 'rack-contrib'
@@ -19,10 +19,10 @@ gem 'json', '~> 1.8.1'
 
 # gem 'therubyracer', :platform => :ruby
 
-gem 'uglifier'
-
+# gem 'uglifier'
 
 group :development, :assets do
-	# gem "wdm"
 	gem 'therubyracer', :platform => :ruby
+	gem 'oj' # faster JS compiles
+	# gem "wdm"
 end
