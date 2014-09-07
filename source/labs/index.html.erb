@@ -74,7 +74,7 @@ layout: layout
 	{{/if}}
 	{{#if view.corsProtected}}
 		<div class="viewer-newtab-container Center-Container">
-			<a class="returnbtn viewer-newtab Absolute-Center is-Fixed" {{bind-attr href=url}}>Open in new tab</a>
+			<a class="returnbtn viewer-newtab Absolute-Center is-Fixed" {{bind-attr href=url}} target="_blank">Open in new tab</a>
 		</div>
 	{{/if}}
 	{{#if view.contentOK}}
