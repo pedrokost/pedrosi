@@ -44,7 +44,7 @@ layout: layout
 #explanation{
 	margin:0;
 	padding:0;
-	width:100%;
+	wid%;
 	height:150px;
 	overflow:auto;
 	/*font-family:Georgia, "Times New Roman", Times, serif;*/
@@ -69,37 +69,70 @@ function showToolTip(){
 	cc("Hovered");
 }
 
-var height = 1000;
-var width = 1200;
 var relativeTime = new Array();
 var schoolType = [];
-var relativeTime = [0,0.2 , 0.10 , 0.2 , 0.05 , 0.05 , 0.1 , 0.05, 0.05, 0.1, 0.15];
-var schoolLabels = ["", "Colegio Sagrado Corazon de Castelar", "Colegio Sagrado Corazon de Castelar", "Ecole du Paradis*", "Lycee International de Saint Germain en Laye", "OS Metlika", "Gimnazija Novo mesto", "Gimnazija Jozeta Plecnika", "Ginmazija Bezigrad", "University of Ljubljana"];
-var schoolType = ["", "Kindergarden", "Primary school", "Primary school", "Candidate for French International Baccalaureate", "Primary school", "High school", "High school", "International Baccalaureate Diploma Programme", "BEng in Computer Science and Informatics"];
-var relativeSecondaryTime = [0,0.25, 0.25, 0.1];
+// var time = [0,0.2 , 0.10 , 0.2 , 0.05 , 0.05 , 0.1 , 0.05, 0.05, 0.1, 0.15];
+
+var time = [0, 4, 2, 4, 1, 1, 2, 1, 1, 2, 3, 1];
+
+var schoolLabels = ["", "Colegio Sagrado Corazon de Castelar", "Colegio Sagrado Corazon de Castelar", "Ecole du Paradis", "Lycee International de Saint Germain en Laye", "OS Metlika", "Gimnazija Novo mesto", "Gimnazija Jozeta Plecnika", "Ginmazija Bezigrad", "University of Ljubljana", "Imperial College London", ""];
+var schoolType = ["", "Kindergarden", "Primary school", "Primary school", "Candidate for French International Baccalaureate", "Primary school", "High school", "High school", "International Baccalaureate Diploma Programme", "BEng in Computer Science and Informatics", "MSc in Computing (Artificial Intelligence)", ""];
+var secondaryTime = [0, 5, 5, 2];
 var schoolSecondaryLabels = ["", "Slovenska pristava","SEAD-Servicio de Educación a Distancia", ""];
 var schoolSecondaryType = ["", "Slovenian Saturday (kindergarden and)\nprimary school", "Argentinean primary school\na distance learning programme", ""];
-var gradesByYear = ["","","","","","","","","","","","",4.67/5, 4.67/5 ,4.93/5,4.5/5, "",37/45, 9.2/10,9.3/10, ""];
-var awardsByYear = ["","","","","","","","","","","","","Silver award at Physics National Competition","Silver award at Physics National Competition","Silver award at Mathematical National Competition","Silver award at Physics National Competition","Silver award at Physics National Competition","","Top 5% student","Top 5% student"];
+var gradesByYear = ["","","","","","","","","","","","",4.67/5, 4.67/5, 4.93/5,4.5/5, "",37/45, 9.2/10,9.3/10, "", "", ""];
+var awardsByYear = ["","","","","","","","","","","","","Silver award at Physics National Competition","Silver award at Physics National Competition","Silver award at Mathematical National Competition","Silver award at Physics National Competition","Silver award at Physics National Competition","","Top 5% student","Top 5% student","Top 5% student", "Distinction", ""];
+
+
+var totalYears = time.reduce(function(sum, el) {
+	sum += el;
+	return sum;
+}, 0);
+
+var relativeTime = time.map(function(t) {
+	return 1.05 * t / totalYears;
+});
+
+var relativeSecondaryTime = secondaryTime.map(function(t) {
+	return 1.1 * t / totalYears;
+});
+
+var cumTime = time.reduce(function(cum, time) {
+	cum.push(cum[cum.length - 1] + time);
+	return cum;
+}, [0]).splice(1);
+
+var cumSecondaryTime = secondaryTime.reduce(function(cum, time) {
+	cum.push(cum[cum.length - 1] + time);
+	return cum;
+}, [0]).splice(1);
 
 var timelineColor = "#663333";
 
 
 //draws time extesion to schools
-var i1, i2;
-function extendSchoolLength(array, index, cumIndex, x){
+function extendSchoolLength(cumTime, index, x){
+	var i1, i2;
 	x -= 5;
-	i1 = array[index];
-	i2 = array[index + 1];
-	if(i1 == undefined) i1 = i2;
-	if(i2 == undefined) i2 = 0.01;// so small we skip it
+	i1 = cumTime[index];
+	i2 = cumTime[index + 1];
+
+	if(i1 == undefined || i2 == undefined) return;
+	// console.log(i1, i2)
 	
 	if(i1 > 0){
 		//cc(array.length + ", "+  index +", "+ cumIndex +", ");
-		p.path("M" + x + " " + (cumIndex * height) + "L" + x + " " + ((cumIndex + i2) * height - 10)).attr({stroke: "#AA3333",  "stroke-width": 5});
+		p.path("M" + x + " " + (i1 * yearHeight) + "L" + x + " " + (i2 * yearHeight - 10)).attr({stroke: "#AA3333",  "stroke-width": 5});
 	}
 }
 
+function formattedGrade (value) {
+	return (gradesByYear[year] != "") ? Math.round(Number(gradesByYear[year]) * 100) + "%" : ""
+}
+
+var yearHeight = 50;
+var height = yearHeight * totalYears + 50;
+var width = 1200;
 
 var p = Raphael(0, 5, width, height);
 
@@ -112,86 +145,86 @@ var awardNameFormat = {font: '10px Arial, Georgia, Times', fill:"#444"};
 var gradeLabelFormat= {font: '19px Arial Black', opacity: 1, fill: "orange", "font-weight": "bold"};
 var yearLabel, gradeLabel, awardsLabels, awardImage, awardLabel;
 var tick;
-for(var year = 0; year < gradesByYear.length; year++){
+var yOffset = yearHeight / 2;
+
+for(var year = 0; year < totalYears; year++){
 
 	//print year and ticks
-	yearLabel = p.text(10, (year * 0.05 * height) + 25 , (1992 + year)).attr(yearLabelFormat);
-	tick = p.path("M45 " + (year * 0.05 * height) + " L55 " + (year * 0.05 * height));
-	//print dates for second timetable
-	if(year < 13){
-		//print year and ticks
-		yearLabel = p.text(510, (year * 0.05 * height) + 25, (1992 + year)).attr(yearLabelFormat).attr({opacity: 0.5});
-		tick = p.path("M545 " + (year * 0.05 * height) + " L555 " + (year * 0.05 * height)).attr({opacity: 0.5});
-	}
+	yearLabel = p.text(10, (year * yearHeight) + yOffset , (1992 + year)).attr(yearLabelFormat);
+	tick = p.path("M45 " + (year * yearHeight) + " L55 " + (year * yearHeight));
 	//add grades
-	gradeLabel = p.text(55, (year * 0.05 * height) + 25, (gradesByYear[year] != "") ? Math.round(Number(gradesByYear[year]) * 100) + "%" : "").attr(gradeLabelFormat);
-	// awardLabel = p.text(450, (year * 0.05 * height) + 25, (awardsByYear[year] != "") ? Math.round(Number(gradesByYear[year]) * 100) + "%" : "").attr(gradeLabelFormat);
+	gradeLabel = p.text(55, (year * yearHeight) + yOffset, formattedGrade(gradesByYear[year])).attr(gradeLabelFormat);
+
 	if(awardsByYear[year] && awardsByYear[year].length >= 0){
 		awardLabel = awardsByYear[year].toString().slice(0,1);
-	}
-	else
+	} else
 		awardLabel = "";
 	if(awardLabel == "G"){
-		awardImage = p.circle(120, (year * 0.05 * height + 30), 10).attr({fill: "#FC3", stroke:"black"});
-		var awardName = p.text(145, (year * 0.05 * height + 40), awardsByYear[year]);
+		awardImage = p.circle(120, (year * yearHeight + 30), 10).attr({fill: "#FC3", stroke:"black"});
+		var awardName = p.text(145, (year * yearHeight + 40), awardsByYear[year]);
 		}else if(awardLabel == "S"){
-		awardImage = p.circle(120, (year * 0.05 * height + 30), 10).attr({fill: "grey", stroke:"black"});
-		var awardName = p.text(135, (year * 0.05 * height + 45), awardsByYear[year]).attr(awardNameFormat);
+		awardImage = p.circle(120, (year * yearHeight + 30), 10).attr({fill: "grey", stroke:"black"});
+		var awardName = p.text(135, (year * yearHeight + 45), awardsByYear[year]).attr(awardNameFormat);
 	}else if(awardLabel == "B"){
-		awardImage = p.circle(120, (year * 0.05 * height + 30), 10).attr({fill: "#942", stroke:"black"});
-		var awardName = p.text(135, (year * 0.05 * height + 45), awardsByYear[year]).attr(awardNameFormat);
+		awardImage = p.circle(120, (year * yearHeight + 30), 10).attr({fill: "#942", stroke:"black"});
+		var awardName = p.text(135, (year * yearHeight + 45), awardsByYear[year]).attr(awardNameFormat);
 	}else{
-		var awardName = p.text(135, (year * 0.05 * height + 45), awardsByYear[year]).attr(awardNameFormat);
+		var awardName = p.text(135, (year * yearHeight + 45), awardsByYear[year]).attr(awardNameFormat);
 	}	
 }
 
-//add schoool names, descriptions, awards
-var schoolName, schoolTypeLabel, schoolSecondaryName, schoolSecondaryTypeLabel;
+// //add schoool names, descriptions, awards
+var schoolSecondaryName, schoolSecondaryTypeLabel;
 var cumulativeTime = 0;
 var schoolNameFormat = {font: '17px Arial Black', opacity: 1, fill: Raphael.getColor(0.7)};
 var schoolTypeFormat = {font: '15px Georgia, Times', opacity: 1, fill: Raphael.getColor(0.7)};
 var faded = {opacity: 1};
-for(var school = 0; school < relativeTime.length; school++){
-	cumulativeTime += relativeTime[school];
-	extendSchoolLength(relativeTime, school, cumulativeTime, 110);  //draw indication
-	
-	//set opacity for future
-	if(school == relativeTime.length-1){
-		faded = {opacity: 0.5};
-	}
+for(var schoolIdx = 1; schoolIdx < time.length; schoolIdx++){
+	extendSchoolLength(cumTime, schoolIdx, 110);  //draw indication
 		
-	//add school name and description
-	schoolName = p.text(110, (cumulativeTime * height) + 10, schoolLabels[school]).attr(schoolNameFormat).attr(faded);
-	schoolTypeLabel = p.text(135, (cumulativeTime * height) + 30, schoolType[school]).attr(schoolTypeFormat).attr(faded);
+	//add schoolIdx name and description
+	p.text(110, (cumTime[schoolIdx] * yearHeight) + 10, schoolLabels[schoolIdx]).attr(schoolNameFormat).attr(faded);
+	p.text(135, (cumTime[schoolIdx] * yearHeight) + 30, schoolType[schoolIdx]).attr(schoolTypeFormat).attr(faded);
 }
+
 //draw migration lines
-var migrationLine1 = p.path("M50 " + (0.5 * height) + " L" + width + " " + (0.5 * height)).attr({stroke: timelineColor, "stroke-width": 2, opacity:0.6});
-var migrationLine2 = p.path("M50 " + (0.6 * height) + " L" + width + " " + (0.6 * height)).attr({stroke: timelineColor, "stroke-width": 2, opacity:0.6});
-// var migrationLine3 = p.path("M50 " + (0.95 * height) + " L" + width + " " + (0.95 * height)).attr({stroke: timelineColor, "stroke-width": 2, opacity:0.6}).attr("stroke-dasharray" ,". ");
-//add country names
+var migrationLineStyle = {stroke: timelineColor, "stroke-width": 2, opacity:0.6};
+var migrationAges = [10, 12, 21, 22];
+for (var i = 0; i < migrationAges.length; i++) {
+	p.path("M50 " + (migrationAges[i] * yearHeight) + " L" + width + " " + (migrationAges[i] * yearHeight)).attr(migrationLineStyle);
+};
+
+// add country names
 var countryFormat = {font: '25px Arial Black', opacity: 0.6, fill: Raphael.getColor(0.7)};
-var argentina = p.text(-30, 0.5 * height - 100, "Argentina").rotate(-90, true).attr(countryFormat);
-var slovenia = p.text(-20, 0.8 * height - 100, "Slovenia").rotate(-90, true).attr(countryFormat);
-var france = p.text(-10, 0.7 * height - 150, "France").rotate(-90, true).attr(countryFormat);
+p.text(-30, 9 * yearHeight, "Argentina").rotate(-90, true).attr(countryFormat);
+p.text(-10, 11 * yearHeight, "France").rotate(-90, true).attr(countryFormat);
+p.text(-20, 13 * yearHeight, "Slovenia").rotate(-90, true).attr(countryFormat);
+p.text( 5, 21.5 * yearHeight, "UK").rotate(-90, true).attr(countryFormat);
 
 //add sencondary schools and info
-cumulativeTime = 0; //reset
+
+console.log(cumTime, cumSecondaryTime)
 for(school = 0; school < relativeSecondaryTime.length; school++){
-	cumulativeTime += relativeSecondaryTime[school];
-	extendSchoolLength(relativeSecondaryTime, school, cumulativeTime, 600);	
+	extendSchoolLength(cumSecondaryTime, school, 600);	
 	//add secondary schools and their respective description
-	schoolSecondaryName = p.text(600, (cumulativeTime * height) + 10, schoolSecondaryLabels[school]).attr(schoolNameFormat);
-	schoolSecondaryTypeLabel = p.text(625, (cumulativeTime * height) + 35, schoolSecondaryType[school]).attr(schoolTypeFormat);
+	schoolSecondaryName = p.text(600, (cumSecondaryTime[school] * yearHeight) + 10, schoolSecondaryLabels[school]).attr(schoolNameFormat);
+	schoolSecondaryTypeLabel = p.text(625, (cumSecondaryTime[school] * yearHeight) + 35, schoolSecondaryType[school]).attr(schoolTypeFormat);
 }
 
-//scholarships
+// //scholarships
 var scholarhipColor = Raphael.getColor(0.7);
-var timelineScholarshig = p.path("M600 "+ 0.7 * height+"L600 "+ (height * 0.95)).attr({stroke: scholarhipColor,  "stroke-width": 5});
-var scholarshipLabel = p.text(500, 0.85 * height, "Zois Scholarship").rotate(-90, true).attr({font: '17px Arial Black',fill: scholarhipColor, opacity:1});
+// Zoisova
+p.path("M600 "+  14 * yearHeight +"L600 "+ (21 * yearHeight - 10)).attr({stroke: scholarhipColor,  "stroke-width": 5});
+p.text(500, 17.5 * yearHeight, "Zois Scholarship").rotate(-90, true).attr({font: '17px Arial Black',fill: scholarhipColor, opacity:1});
+// Adfu
+p.path("M600 "+  21 * yearHeight +"L600 "+ 22 * yearHeight).attr({stroke: scholarhipColor,  "stroke-width": 5});
+p.text(570, 21.5 * yearHeight, "Adfutura\nscholarship").rotate(-90, true).attr({font: '17px Arial Black', 'text-anchor': 'middle', fill: scholarhipColor, opacity:1});
+
 </script>
 <div id="aboutme"> <img src="index/pedro-kostelec.jpg" width="200" height="164" alt="Pedro Kostelec">
 	<p>This is me, Pedro D. Kostelec. And what you see on the left is my academic timeline.</p>	
-	<p>The timeline was created in three hours, using the raphael.js drawing library, which I have never used before.</p>
+	<p>The original timeline was coded in 2011 in three hours, using the raphael.js drawing library, which I have never used before.</p>
+	<p>Only minor updates were later required in order to simplify maintainance.</p>
 </p>
 </div>
 </div>
