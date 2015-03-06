@@ -1,12 +1,12 @@
 source "https://rubygems.org"
 
-ruby '2.1.5'
+ruby '2.2.0'
 
 gem 'puma',      '~> 2.7'
 gem 'rake',      '~> 10.1'
 
-gem "middleman", "~> 3.2.1"
-gem "middleman-blog", "~> 3.5.1"
+gem "middleman", "~> 3.3.10"
+gem "middleman-blog", "~> 3.5.3"
 # gem 'middleman-livereload', '~> 3.0.1'
 gem "builder", "~> 3.2.2"
 # gem 'rack-contrib'
