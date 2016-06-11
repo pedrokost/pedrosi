@@ -5,6 +5,7 @@ ruby '2.2.0'
 gem 'puma',      '~> 2.7'
 gem 'rake',      '~> 10.1'
 
+gem 'middleman-s3_sync'
 gem "middleman", "~> 3.3.10"
 gem "middleman-blog", "~> 3.5.3"
 # gem 'middleman-livereload', '~> 3.0.1'
@@ -25,4 +26,5 @@ group :development, :assets do
 	gem 'therubyracer', :platform => :ruby
 	gem 'oj' # faster JS compiles
 	# gem "wdm"
+	gem 'mime-types'
 end

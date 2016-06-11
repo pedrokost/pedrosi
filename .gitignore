@@ -11,3 +11,4 @@ build/
 *.sublime-*
 
 libpeerconnection.log
+.s3_sync
