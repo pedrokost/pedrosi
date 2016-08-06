@@ -394,7 +394,7 @@ pre{
 	width: 99%;    
 	height:110%;                     
 	white-space: pre-wrap;                 /* CSS3 browsers  */
-	white-space: -moz-pre-wrap !important; /* 1999+ Mozilla  */
+	white-space: -moz-pre-wrap; /* 1999+ Mozilla  */
 	white-space: -o-pre-wrap;              /* Opera 7 and up */
 	word-wrap: break-word;                 /* IE 5.5+ and up */
 	line-height:1em;
@@ -503,11 +503,10 @@ body{
 }
 /*FONTS*/
 body{
-	font-family: 'PT Sans', arial, serif;
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 }
 h1.section{
 	font-style:italic;
-	font-family: 'Josefin Slab', 'Times New Roman', Times, serif;
 }
 #contact a{
 	font-family: 'PT Sans', Arial, Helvetica, sans-serif;

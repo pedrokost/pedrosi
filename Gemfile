@@ -17,7 +17,6 @@ gem 'middleman-minify-html'
 gem 'rb-inotify', '~> 0.9'
 gem 'json', '~> 1.8.1'
 
-
 # gem 'therubyracer', :platform => :ruby
 
 # gem 'uglifier'

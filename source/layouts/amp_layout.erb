@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pedro Kostelec</title>
+    <link rel="canonical" href="/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <meta content="Pedro Damian Kostelec is a greaduate from Imperial College London in MSc Computing, specialized in Artificial intelligence. He is the CTO of Sentinel Marine solutions, a company which delivers yacht monitoring solutions." name="description">
+    <meta content="Pedro Kostelec, Pedro Damian Kostelec, web technologies, flash, java, HTML5, CSS, video, machine learning, artitifical intelligence" name="keywords">
+
+    <link rel="shortcut icon" href="assets/images/favicon_16px.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:regular">
+    <% styles = inline_stylesheet("style") %> 
+    <% styles.gsub!("<style", "<style amp-custom") %>
+    <%= styles %>
+    
+    <script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+
+  </head>
+  <body>
+    <%= yield_content(:head)%>
+    
+
+    <div id="labEprouvette"></div>
+    <div id="headerArea">
+        <header>
+            <h1><%= yield_content(:header)%></h1>
+        </header>
+    </div>
+    <div id="wrapper">
+        <h2><%= yield_content(:intro)%></h2>
+        <nav>
+            <%= partial "shared/navlinks" %>
+        </nav>
+    
+        <% content = yield %>
+        <%
+        content.gsub!("<img", "<amp-img")
+        content.gsub!("<iframe", "<amp-iframe")
+        content.gsub!("</img", "</amp-img")
+        content.gsub!("</iframe", "</amp-iframe")
+        %>
+        <%= content %>
+
+        <footer>
+            <small>&copy; 2010-2016, Pedro Damian Kostelec, pedro.si</small>
+        </footer>
+    </div>
+    <amp-analytics type="googleanalytics" id="analytics1">
+        <script type="application/json">
+        {
+          "vars": {
+            "account": "UA-19545605-1"
+          },
+          "triggers": {
+            "trackPageview": {
+              "on": "visible",
+              "request": "pageview"
+            }
+          }
+        }
+        </script>
+    </amp-analytics>
+  </body>
+</html>

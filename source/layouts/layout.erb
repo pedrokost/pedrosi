@@ -8,14 +8,14 @@
     <meta content="Pedro Kostelec, Pedro Damian Kostelec, web technologies, flash, java, HTML5, CSS, video, machine learning, artitifical intelligence" name="keywords">
 
     <link rel="shortcut icon" href="assets/images/favicon_16px.png">
-  </head>
-  <body>
     <!--[if IE]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans:regular|Josefin+Slab:lightitalic" %>
     <%= stylesheet_link_tag "style" %> 
     <%= yield_content(:head)%>
+  </head>
+  <body>
     
     <%= yield %>
   

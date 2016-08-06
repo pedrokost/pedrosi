@@ -1,5 +1,7 @@
 require 'base64'
 require 'RMagick'
+require "lib/asset_helper"
+helpers AssetHelper
 
 helpers do
   def image(name, options={})
@@ -27,11 +29,12 @@ helpers do
 
     alt = "alt=\"#{options[:alt]}\"" if options[:alt]
     width = "width=\"#{options[:width]}\"" if options[:width]
+    height = "height=\"#{options[:height]}\"" if options[:height]
     data = Base64.encode64(img.to_blob)
     # str  = "<img src=\"\"/>"
 
     # str = "<img #{alt} #{width} src=\"data:image/jpeg;base64,#{data}\"/>"
-    str = "<img #{alt} #{width} src=\"#{load_from_dir}index/#{resized_img_name}\"/>"
+    str = "<img #{alt} #{width} #{height} src=\"#{load_from_dir}index/#{resized_img_name}\"/>"
     # str = "<img #{alt} #{width} src=\"/labs/2014/test/index/#{resized_img_name}\"/>"
     str.gsub!(/\n/, '')
     str
@@ -91,6 +94,7 @@ end
 # Page options, layouts, aliases and proxies
 ###
 page "*", layout: :full_layout
+page "/amp/*", layout: :amp_layout
 # page "/feed.xml", :layout => false
 # Per-page layout changes:
 #
