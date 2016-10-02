@@ -33,7 +33,7 @@ Hi, I'm a <span itemprop="title">graduate from <span itemprop="affiliation">Impe
             url_path ||= article
             url_path = "/labs#/labs/#{page_articles.size - i - 1}"
         %>
-			<% link_to url_path, title: article.title, :'data-instant' => true do %> 
+			<% link_to url_path, title: article.title, :'data-instant' => false do %> 
 			<div class="experiment">
                 <h4><%= article.title %></h4>
                 <div class="tools">
