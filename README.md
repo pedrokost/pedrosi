@@ -15,3 +15,9 @@ The website in build on Middleman
 The only expectation is that `middleman build` will generate your site into `./build`. That's where Rack::TryStatic will look.
 
 You can customize the 404 page that's served if TryStatic can't find a file by editing `source/404.html.erb`.
+
+### Deployment
+
+```
+middleman s3_sync
+```

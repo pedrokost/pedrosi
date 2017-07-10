@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <title>Pedro Kostelec</title>
-    <meta content="Pedro Damian Kostelec is a greaduate from Imperial College London in MSc Computing, specialized in Artificial intelligence. He is the CTO of Sentinel Marine solutions, a company which delivers yacht monitoring solutions." name="description">
+    <title><%= yield_content(:title) || 'Pedro Kostelec' %></title>
+    <meta content="<%= yield_content(:description) || 'Pedro Damian Kostelec is a greaduate from Imperial College London in MSc Computing, specialized in Artificial intelligence. He is the CTO of Sentinel Marine solutions, a company which delivers yacht monitoring solutions.' %>" name="description">
     <meta content="Pedro Kostelec, Pedro Damian Kostelec, web technologies, flash, java, HTML5, CSS, video, machine learning, artitifical intelligence" name="keywords">
 
     <link rel="shortcut icon" href="/images/favicon_16px.png">
