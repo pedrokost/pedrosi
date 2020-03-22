@@ -134,7 +134,7 @@ GEM
     padrino-support (0.12.9)
       activesupport (>= 3.1)
     parallel (1.19.1)
-    puma (2.16.0)
+    puma (3.12.4)
     rack (1.6.13)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -189,7 +189,7 @@ DEPENDENCIES
   middleman-s3_sync (~> 3.3.10)
   mime-types
   oj
-  puma (~> 2.7)
+  puma (~> 3.12)
   rake (~> 10.1)
   rb-inotify (~> 0.9)
   rmagick (~> 2.13.1)

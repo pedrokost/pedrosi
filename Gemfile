@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.3.8'
 
-gem 'puma',      '~> 2.7'
+gem 'puma',      '~> 3.12'
 gem 'rake',      '~> 10.1'
 
 gem 'middleman-s3_sync', '~> 3.3.10'
