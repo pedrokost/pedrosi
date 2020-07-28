@@ -15,7 +15,7 @@ gem 'bourbon'
 gem "rmagick", "~> 2.13.1", :require => 'RMagick'
 gem 'middleman-minify-html', '~> 3.4.1'
 gem 'rb-inotify', '~> 0.9'
-gem 'json', '~> 1.8.1'
+gem 'json', '~> 2.3.0'
 
 # gem 'therubyracer', :platform => :ruby
 
